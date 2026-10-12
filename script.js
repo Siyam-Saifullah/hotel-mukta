@@ -660,8 +660,9 @@ window.openRoomModal = function(roomId) {
   if (amenitiesListEl) {
     const list = isBn ? room.amenitiesBn : room.amenitiesEn;
     amenitiesListEl.innerHTML = list.map(item => `
-      <li style="display:flex; align-items:center; gap:0.6rem; color:#cbd5e1; font-size:0.9rem; margin-bottom:0.5rem;">
-        <i class="fas fa-check-circle" style="color:#d4af37; font-size:0.85rem;"></i> ${item}
+      <li class="modal-amenity-item">
+        <i class="fas fa-check-circle"></i>
+        <span>${item}</span>
       </li>
     `).join('');
   }
@@ -674,12 +675,16 @@ window.openRoomModal = function(roomId) {
 
   if (modal) {
     modal.classList.add('active');
+    document.body.classList.add('modal-open');
   }
 };
 
 window.closeRoomModal = function() {
   const modal = document.getElementById('roomDetailModal');
-  if (modal) modal.classList.remove('active');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.classList.remove('modal-open');
+  }
 };
 
 // --- Form Listeners ---
@@ -808,10 +813,12 @@ function initGallery() {
   if (closeBtn && lightbox) {
     closeBtn.addEventListener('click', () => {
       lightbox.classList.remove('active');
+      document.body.classList.remove('modal-open');
     });
     lightbox.addEventListener('click', (e) => {
       if (e.target === lightbox) {
         lightbox.classList.remove('active');
+        document.body.classList.remove('modal-open');
       }
     });
   }
@@ -820,7 +827,10 @@ function initGallery() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeRoomModal();
-      if (lightbox) lightbox.classList.remove('active');
+      if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.classList.remove('modal-open');
+      }
     }
   });
 }
@@ -859,7 +869,10 @@ window.openLightbox = function(index, category = 'all') {
 
   if (img) img.src = item.thumb;
   if (caption) caption.textContent = isBn ? item.titleBn : item.titleEn;
-  if (lightbox) lightbox.classList.add('active');
+  if (lightbox) {
+    lightbox.classList.add('active');
+    document.body.classList.add('modal-open');
+  }
 };
 
 // --- Back to Top ---

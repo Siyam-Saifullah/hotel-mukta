@@ -81,6 +81,16 @@
         <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Gallery</a>
         <a href="#location" class="nav-link" data-i18n="nav.location">Location</a>
         <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <div class="mobile-nav-ctas">
+          <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability." target="_blank" class="btn btn-whatsapp mobile-menu-wa-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span data-i18n="nav.bookWa">Book via WhatsApp</span>
+          </a>
+          <a href="tel:+8801711302322" class="btn btn-outline-gold mobile-menu-call-btn">
+            <i class="fas fa-phone-alt"></i>
+            <span>01711-302322</span>
+          </a>
+        </div>
       </nav>
 
       <!-- Right Header Actions -->
@@ -992,28 +1002,28 @@
         <i class="fas fa-times"></i>
       </button>
 
-      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; padding-right: 2rem;">
-        <h3 id="modalRoomTitle" style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--gold-light);">Room Title</h3>
-        <div id="modalRoomPrice" style="font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--text-main);">Price</div>
+      <div class="modal-header-row">
+        <h3 id="modalRoomTitle" class="modal-room-title">Room Title</h3>
+        <div id="modalRoomPrice" class="modal-room-price">Price</div>
       </div>
 
-      <img id="modalRoomImg" src="" alt="Room Photo" style="width: 100%; height: 260px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--border-gold);">
+      <img id="modalRoomImg" src="" alt="Room Photo" class="modal-room-img">
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-        <div>
-          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-subtle);">Capacity</span>
-          <div id="modalRoomCapacity" style="font-weight: 600; color: var(--text-main);">Guests</div>
+      <div class="modal-specs-grid">
+        <div class="modal-spec-col">
+          <span class="modal-spec-label">Capacity</span>
+          <div id="modalRoomCapacity" class="modal-spec-value">Guests</div>
         </div>
-        <div>
-          <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-subtle);">Room Area</span>
-          <div id="modalRoomSize" style="font-weight: 600; color: var(--text-main);">sq.ft</div>
+        <div class="modal-spec-col">
+          <span class="modal-spec-label">Room Area</span>
+          <div id="modalRoomSize" class="modal-spec-value">sq.ft</div>
         </div>
       </div>
 
-      <h4 style="font-size: 1rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;">Included Room Amenities</h4>
-      <ul id="modalRoomAmenities" style="margin-bottom: 1.8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;"></ul>
+      <h4 class="modal-amenities-title">Included Room Amenities</h4>
+      <ul id="modalRoomAmenities" class="modal-amenities-list"></ul>
 
-      <button id="modalRoomWaBtn" class="btn btn-whatsapp" style="width: 100%; padding: 1rem;">
+      <button id="modalRoomWaBtn" class="btn btn-whatsapp modal-wa-btn">
         <i class="fab fa-whatsapp"></i>
         <span data-i18n="modal.waBook">Book This Room on WhatsApp</span>
       </button>
