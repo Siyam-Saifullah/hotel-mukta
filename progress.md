@@ -91,5 +91,23 @@
   - Navigated to `http://localhost:8080#contact` using autonomous browser agent.
   - Injected test values (`Siyam Ahmed` and `+880 1711302322`) and visually confirmed generous text clearance and zero overlap.
 
+## Session 5: GitHub Repository Deployment
+
+### Completed Actions
+- [x] Initialized Git repository on `main` branch.
+- [x] Created `.gitignore` and comprehensive project `README.md`.
+- [x] Committed all project files:
+  - `index.html`
+  - `styles.css`
+  - `script.js`
+  - `README.md`
+  - `task_plan.md`
+  - `findings.md`
+  - `progress.md`
+  - `.gitignore`
+- [x] Configured remote origin: `https://github.com/Siyam-Saifullah/hotel-mukta.git`.
+- [x] Successfully pushed root commit `2d9339b` to `main` branch on GitHub.
+
+
 
 
