@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://hotelmuktainternational.com">
 
   <!-- Favicon & Stylesheet -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232E1F29'/><text x='50%25' y='68%25' font-family='Georgia, serif' font-size='56' font-weight='700' fill='%23A36E4A' text-anchor='middle'>M</text></svg>">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 
@@ -63,9 +63,7 @@
       
       <!-- Brand Logo -->
       <a href="#home" class="brand-logo" id="brandLogoLink">
-        <div class="logo-crest">
-          <i class="fas fa-crown"></i>
-        </div>
+        <div class="logo-monogram">HM</div>
         <div class="logo-text-block">
           <span class="logo-name">MUKTA <span>INTERNATIONAL</span></span>
           <span class="logo-sub">Hotel & Hospitality • Rajshahi</span>
@@ -75,16 +73,16 @@
       <!-- Desktop Nav Menu -->
       <nav class="nav-menu" id="navMenu">
         <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
-        <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
-        <a href="#rooms" class="nav-link" data-i18n="nav.rooms">Rooms & Rates</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">The Property</a>
+        <a href="#rooms" class="nav-link" data-i18n="nav.rooms">Accommodations</a>
         <a href="#amenities" class="nav-link" data-i18n="nav.amenities">Amenities</a>
         <a href="#gallery" class="nav-link" data-i18n="nav.gallery">Gallery</a>
         <a href="#location" class="nav-link" data-i18n="nav.location">Location</a>
-        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Reservations</a>
         <div class="mobile-nav-ctas">
-          <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability." target="_blank" class="btn btn-whatsapp mobile-menu-wa-btn">
+          <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20suite%20availability." target="_blank" class="btn btn-whatsapp mobile-menu-wa-btn">
             <i class="fab fa-whatsapp"></i>
-            <span data-i18n="nav.bookWa">Book via WhatsApp</span>
+            <span data-i18n="nav.bookWa">Concierge Reserve</span>
           </a>
           <a href="tel:+8801711302322" class="btn btn-outline-gold mobile-menu-call-btn">
             <i class="fas fa-phone-alt"></i>
@@ -103,15 +101,12 @@
 
         <!-- Direct Phone Hotline Pill -->
         <a href="tel:+8801711302322" class="header-phone-link" id="navCallBtn" title="Direct Phone Call">
-          <span class="phone-icon-wrap"><i class="fas fa-phone-alt"></i></span>
-          <span class="phone-text-wrap">
-            <span class="phone-label">Front Desk</span>
-            <span class="phone-number">01711-302322</span>
-          </span>
+          <i class="fas fa-phone-alt"></i>
+          <span class="phone-number">01711-302322</span>
         </a>
 
         <!-- Fast WhatsApp Action -->
-        <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability." target="_blank" class="btn btn-whatsapp header-wa-btn" id="navBookWaBtn">
+        <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20suite%20availability." target="_blank" class="btn btn-whatsapp header-wa-btn" id="navBookWaBtn">
           <i class="fab fa-whatsapp"></i>
           <span data-i18n="nav.bookWa">Book via WhatsApp</span>
         </a>
@@ -129,63 +124,56 @@
 
   <!-- Hero Section -->
   <section class="hero-section" id="home">
-    <div class="hero-bg-overlay"></div>
     <div class="container hero-content">
       
       <!-- Highlight Beacon Badge -->
       <div class="hero-badge-wrap">
         <div class="hero-badge">
-          <span class="pulse-beacon"></span>
-          <span data-i18n="hero.badge">★ Premier Hospitality in Rajshahi City</span>
+          <span data-i18n="hero.badge">HOTEL MUKTA INTERNATIONAL · RAJSHAHI</span>
         </div>
       </div>
 
       <!-- Main Headline -->
       <h1 class="hero-title">
-        <span class="gold-accent serif-font">Hotel Mukta</span> International
+        <span class="serif-font" data-i18n="hero.title">Sanctuary of Quiet Refinement</span>
       </h1>
 
-      <p class="hero-tagline" data-i18n="hero.title">
-        Experience Refined Comfort in the Heart of Rajshahi
-      </p>
-
       <p class="hero-description" data-i18n="hero.desc">
-        Conveniently situated at Batar More, Shaheb Bazar. Enjoy modern air-conditioned rooms, 24/7 personalized service, high-speed Wi-Fi, and authentic warm hospitality.
+        At Batar More, Shaheb Bazar. An intimate retreat pairing warm Bengali hospitality with modern serenity.
       </p>
 
       <!-- Hero CTA Buttons -->
       <div class="hero-cta-group">
-        <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20reserve%20a%20room." target="_blank" class="btn btn-whatsapp" id="heroWaReserveBtn">
-          <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i>
-          <span data-i18n="hero.ctaReserve">Reserve on WhatsApp</span>
+        <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20reserve%20a%20suite." target="_blank" class="btn btn-whatsapp" id="heroWaReserveBtn">
+          <i class="fab fa-whatsapp"></i>
+          <span data-i18n="hero.ctaReserve">Reserve with Concierge</span>
         </a>
         <a href="#rooms" class="btn btn-outline-gold" id="heroExploreBtn">
-          <i class="fas fa-bed"></i>
-          <span data-i18n="hero.ctaExplore">Explore Rooms & Rates</span>
+          <span data-i18n="hero.ctaExplore">View Accommodations</span>
         </a>
       </div>
 
       <!-- Stats / Highlights Strip -->
       <div class="hero-stats-grid">
         <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
-          <div class="stat-value" data-i18n="stat.location.val">Prime Batar More</div>
-          <div class="stat-label" data-i18n="stat.location.label">Heart of Rajshahi</div>
+          <div class="stat-icon"><i class="fas fa-compass"></i></div>
+          <div class="stat-value" data-i18n="stat.location.val">Shaheb Bazar</div>
+          <div class="stat-label" data-i18n="stat.location.label">Prime Location</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-clock"></i></div>
-          <div class="stat-value" data-i18n="stat.desk.val">24 / 7 Front Desk</div>
-          <div class="stat-label" data-i18n="stat.desk.label">Always Available</div>
+          <div class="stat-icon"><i class="fas fa-concierge-bell"></i></div>
+          <div class="stat-value" data-i18n="stat.desk.val">24 / 7</div>
+          <div class="stat-label" data-i18n="stat.desk.label">Concierge Desk</div>
         </div>
         <div class="stat-card">
           <div class="stat-icon"><i class="fas fa-wifi"></i></div>
-          <div class="stat-value" data-i18n="stat.wifi.val">High-Speed Wi-Fi</div>
-          <div class="stat-label" data-i18n="stat.wifi.label">Complimentary</div>
+          <div class="stat-value" data-i18n="stat.wifi.val">High-Speed</div>
+          <div class="stat-label" data-i18n="stat.wifi.label">Fiber Wi-Fi</div>
         </div>
         <div class="stat-card">
-          <div class="stat-icon"><i class="fas fa-snowflake"></i></div>
-          <div class="stat-value" data-i18n="stat.comfort.val">Premium Rooms</div>
-          <div class="stat-label" data-i18n="stat.comfort.label">AC & Family Suites</div>
+          <div class="stat-icon"><i class="fas fa-wind"></i></div>
+          <div class="stat-value" data-i18n="stat.comfort.val">AC Suites</div>
+          <div class="stat-label" data-i18n="stat.comfort.label">Climate Control</div>
         </div>
       </div>
 
@@ -198,12 +186,12 @@
       <div class="inquiry-card">
         <div class="inquiry-header-row">
           <div class="inquiry-header-title">
-            <i class="fas fa-calendar-check"></i>
-            <span data-i18n="inquiry.title">Check Availability & Fast WhatsApp Inquiry</span>
+            <i class="far fa-calendar-check"></i>
+            <span data-i18n="inquiry.title">Check Availability</span>
           </div>
           <div class="inquiry-badge-note">
             <i class="fab fa-whatsapp"></i>
-            <span data-i18n="inquiry.direct">Direct WhatsApp Confirmation with Front Desk</span>
+            <span data-i18n="inquiry.direct">Direct Front Desk Confirmation</span>
           </div>
         </div>
 
@@ -212,10 +200,9 @@
           <div class="form-group">
             <label class="form-label" for="inquiryCheckin">
               <i class="far fa-calendar-alt"></i>
-              <span data-i18n="inquiry.checkin">Check-In Date</span>
+              <span data-i18n="inquiry.checkin">Check-In</span>
             </label>
             <div class="form-input-wrap">
-              <i class="far fa-calendar-alt input-icon"></i>
               <input type="date" id="inquiryCheckin" class="form-control" required>
             </div>
           </div>
@@ -224,10 +211,9 @@
           <div class="form-group">
             <label class="form-label" for="inquiryCheckout">
               <i class="far fa-calendar-alt"></i>
-              <span data-i18n="inquiry.checkout">Check-Out Date</span>
+              <span data-i18n="inquiry.checkout">Check-Out</span>
             </label>
             <div class="form-input-wrap">
-              <i class="far fa-calendar-alt input-icon"></i>
               <input type="date" id="inquiryCheckout" class="form-control" required>
             </div>
           </div>
@@ -236,15 +222,14 @@
           <div class="form-group">
             <label class="form-label" for="inquiryRoomSelect">
               <i class="fas fa-bed"></i>
-              <span data-i18n="inquiry.room">Room Category</span>
+              <span data-i18n="inquiry.room">Suite Category</span>
             </label>
             <div class="form-input-wrap">
-              <i class="fas fa-door-open input-icon"></i>
               <select id="inquiryRoomSelect" class="form-control">
-                <option value="Deluxe Twin" data-i18n="inquiry.roomSelect.deluxe">Deluxe Twin Room (৳3,400 / $31)</option>
-                <option value="Premium Twin" data-i18n="inquiry.roomSelect.premium">Premium Twin Room (৳4,500 / $41)</option>
-                <option value="Triple Room" data-i18n="inquiry.roomSelect.triple">Triple Room / Family (৳3,850 / $35)</option>
-                <option value="Any Room" data-i18n="inquiry.roomSelect.all">All Room Types</option>
+                <option value="Deluxe Twin" data-i18n="inquiry.roomSelect.deluxe">Deluxe Twin Room (৳3,400)</option>
+                <option value="Premium Twin" data-i18n="inquiry.roomSelect.premium">Premium Twin Room (৳4,500)</option>
+                <option value="Triple Room" data-i18n="inquiry.roomSelect.triple">Triple Family Suite (৳3,850)</option>
+                <option value="Any Room" data-i18n="inquiry.roomSelect.all">All Suites</option>
               </select>
             </div>
           </div>
@@ -256,7 +241,6 @@
               <span data-i18n="inquiry.guests">Guests</span>
             </label>
             <div class="form-input-wrap">
-              <i class="fas fa-user-friends input-icon"></i>
               <select id="inquiryGuests" class="form-control">
                 <option value="1 Adult">1 Adult</option>
                 <option value="2 Adults" selected>2 Adults</option>
@@ -270,14 +254,13 @@
           <div class="inquiry-btn-col">
             <button type="submit" class="btn btn-whatsapp inquiry-submit-btn" id="topInquirySubmitBtn">
               <i class="fab fa-whatsapp"></i>
-              <span data-i18n="inquiry.btn">Inquire via WhatsApp</span>
+              <span data-i18n="inquiry.btn">Check Availability</span>
             </button>
           </div>
         </form>
       </div>
     </div>
   </section>
-
 
   <!-- About & Heritage Section -->
   <section class="section" id="about">
@@ -286,15 +269,15 @@
         
         <!-- Text Column -->
         <div class="about-text-col">
-          <span class="section-tag" data-i18n="about.tag">Welcome to Hotel Mukta</span>
+          <span class="section-tag" data-i18n="about.tag">The Property</span>
           <h2 class="section-title">
-            <span class="gold-text" data-i18n="about.title">Your Serene Sanctuary in Vibrant Rajshahi</span>
+            <span class="gold-text" data-i18n="about.title">Where Discreet Comfort Meets Rajshahi Heritage</span>
           </h2>
           <p class="about-paragraph" data-i18n="about.p1">
-            Hotel Mukta International stands proudly in the historic and bustling hub of Rajshahi. Whether you are traveling for business, university engagements, or exploring the iconic Padma River bank and Rajshahi silk heritage, our property offers prime accessibility with quiet comfort.
+            Positioned at Batar More, moments from the historic Padma River promenade and silk markets, Hotel Mukta International provides a peaceful sanctuary for discerning business and leisure guests.
           </p>
           <p class="about-paragraph" data-i18n="about.p2">
-            We feature tastefully decorated air-conditioned rooms, round-the-clock front desk assistance, complimentary high-speed internet, on-site dining, and sincere hospitality that makes you feel at home.
+            Experience quietly appointed air-conditioned suites, round-the-clock personalized service, and genuine warmth crafted for restful stays.
           </p>
 
           <!-- 4 Feature Highlights -->
@@ -302,37 +285,36 @@
             <div class="about-feature-item">
               <div class="feature-check-icon"><i class="fas fa-check"></i></div>
               <div class="about-feature-text">
-                <h4 data-i18n="about.f1.title">Central City Access</h4>
-                <p data-i18n="about.f1.desc">Steps from Shaheb Bazar, Silk Showrooms & Transport hubs.</p>
+                <h4 data-i18n="about.f1.title">Prime Location</h4>
+                <p data-i18n="about.f1.desc">Shaheb Bazar, Silk District & rail transit within minutes.</p>
               </div>
             </div>
             <div class="about-feature-item">
               <div class="feature-check-icon"><i class="fas fa-check"></i></div>
               <div class="about-feature-text">
-                <h4 data-i18n="about.f2.title">24-Hour Room Service</h4>
-                <p data-i18n="about.f2.desc">Hot food, tea/coffee & concierge ready any time.</p>
+                <h4 data-i18n="about.f2.title">24-Hour Concierge</h4>
+                <p data-i18n="about.f2.desc">Dedicated room dining, morning refreshments & front desk.</p>
               </div>
             </div>
             <div class="about-feature-item">
               <div class="feature-check-icon"><i class="fas fa-check"></i></div>
               <div class="about-feature-text">
-                <h4 data-i18n="about.f3.title">Family & Business Suites</h4>
-                <p data-i18n="about.f3.desc">Spacious twin and triple bed accommodations.</p>
+                <h4 data-i18n="about.f3.title">Curated Suites</h4>
+                <p data-i18n="about.f3.desc">Generously proportioned twin and family suites.</p>
               </div>
             </div>
             <div class="about-feature-item">
               <div class="feature-check-icon"><i class="fas fa-check"></i></div>
               <div class="about-feature-text">
-                <h4 data-i18n="about.f4.title">Guaranteed Security</h4>
-                <p data-i18n="about.f4.desc">24/7 CCTV surveillance & dedicated safety protocol.</p>
+                <h4 data-i18n="about.f4.title">Peace of Mind</h4>
+                <p data-i18n="about.f4.desc">24/7 monitored premises and discreet guest privacy.</p>
               </div>
             </div>
           </div>
 
-          <div style="margin-top: 2rem;">
-            <a href="#contact" class="btn btn-gold">
-              <i class="fas fa-envelope-open-text"></i>
-              <span data-i18n="nav.contact">Contact Front Desk</span>
+          <div style="margin-top: 2.25rem;">
+            <a href="#contact" class="btn btn-outline-gold">
+              <span data-i18n="nav.contact">Inquire with Concierge</span>
             </a>
           </div>
         </div>
@@ -343,10 +325,10 @@
             <img src="https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_reception_hotelplacer.com.jpg" alt="Hotel Mukta International Reception Desk" class="about-img-main">
           </div>
           <div class="about-float-badge">
-            <div class="badge-crest-icon"><i class="fas fa-award"></i></div>
+            <div class="badge-crest-icon"><i class="fas fa-feather-alt"></i></div>
             <div>
-              <div class="badge-text-title" data-i18n="about.badge.title">Renowned Rajshahi Stay</div>
-              <div class="badge-text-desc" data-i18n="about.badge.desc">Comfort & value in prime location</div>
+              <div class="badge-text-title" data-i18n="about.badge.title">Boutique Hospitality</div>
+              <div class="badge-text-desc" data-i18n="about.badge.desc">Rajshahi, Bangladesh</div>
             </div>
           </div>
         </div>
@@ -356,16 +338,16 @@
   </section>
 
   <!-- Rooms & Suites Showcase Section -->
-  <section class="section" id="rooms" style="background: linear-gradient(180deg, #070a12 0%, #0d1424 50%, #070a12 100%);">
+  <section class="section" id="rooms">
     <div class="container">
       
       <div class="section-header">
         <span class="section-tag" data-i18n="rooms.tag">Accommodations</span>
         <h2 class="section-title">
-          <span class="gold-text" data-i18n="rooms.title">Thoughtfully Designed Rooms & Suites</span>
+          <span class="gold-text" data-i18n="rooms.title">Suites & Guest Rooms</span>
         </h2>
         <p class="section-subtitle" data-i18n="rooms.subtitle">
-          Every room is equipped with split air conditioning, high-speed Wi-Fi, flat-panel television, work desk, refrigerator, prayer mats, and immaculate private bathrooms.
+          Thoughtfully appointed spaces designed for restful quiet and effortless productivity.
         </p>
       </div>
 
@@ -383,13 +365,13 @@
           <div class="room-card-body">
             <h3 class="room-type-title" data-i18n="room.deluxe.title">Deluxe Twin Room</h3>
             <p class="room-short-desc" data-i18n="room.deluxe.desc">
-              Ideal for colleagues or friends traveling together. Features two comfortable single beds, work desk with electrical outlets, and refreshing air-conditioning.
+              Two single beds with crisp linens, executive work desk, split AC, and private bath.
             </p>
 
             <!-- Amenities Chips -->
             <div class="room-amenity-chips">
-              <span class="amenity-chip"><i class="fas fa-snowflake"></i> AC</span>
-              <span class="amenity-chip"><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span class="amenity-chip"><i class="fas fa-snowflake"></i> Split AC</span>
+              <span class="amenity-chip"><i class="fas fa-wifi"></i> Fiber Wi-Fi</span>
               <span class="amenity-chip"><i class="fas fa-tv"></i> HD TV</span>
               <span class="amenity-chip"><i class="fas fa-pray"></i> Prayer Mat</span>
               <span class="amenity-chip"><i class="fas fa-chair"></i> Work Desk</span>
@@ -400,11 +382,10 @@
               <div class="price-col">
                 <span class="price-label" data-i18n="room.perNight">Per Night</span>
                 <span class="price-main" data-i18n="room.deluxe.price">৳ 3,400</span>
-                <span class="price-ref-usd" data-i18n="room.deluxe.ref">~$31.00 USD</span>
               </div>
               <div class="cancellation-note">
                 <i class="fas fa-check-circle"></i>
-                <span data-i18n="room.freeCancel">Free Cancellation</span>
+                <span data-i18n="room.freeCancel">Complimentary Cancellation</span>
               </div>
             </div>
 
@@ -422,7 +403,7 @@
 
         <!-- Room 2: Premium Twin (Featured) -->
         <div class="room-card featured" id="cardPremiumTwin">
-          <div class="featured-ribbon">⭐ Most Popular</div>
+          <div class="featured-ribbon">Signature Suite</div>
           <div class="room-img-wrapper">
             <img src="https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_premiumtwin_hotelplacer.com.jpg" alt="Premium Twin Room - Hotel Mukta International" class="room-img">
             <div class="room-specs-overlay">
@@ -433,16 +414,15 @@
           <div class="room-card-body">
             <h3 class="room-type-title" data-i18n="room.premium.title">Premium Twin Room</h3>
             <p class="room-short-desc" data-i18n="room.premium.desc">
-              An elevated stay with superior furnishings, premium linens, enhanced space, HD satellite entertainment, refrigerator, and quiet ambient lighting.
+              Spacious layout with luxury bedding, whisper AC, satellite entertainment, and refrigerator.
             </p>
 
             <!-- Amenities Chips -->
             <div class="room-amenity-chips">
-              <span class="amenity-chip"><i class="fas fa-snowflake"></i> Quiet AC</span>
+              <span class="amenity-chip"><i class="fas fa-snowflake"></i> Whisper AC</span>
               <span class="amenity-chip"><i class="fas fa-wifi"></i> Fiber Wi-Fi</span>
               <span class="amenity-chip"><i class="fas fa-tv"></i> Satellite TV</span>
               <span class="amenity-chip"><i class="fas fa-box"></i> Refrigerator</span>
-              <span class="amenity-chip"><i class="fas fa-pray"></i> Prayer Mat</span>
               <span class="amenity-chip"><i class="fas fa-bath"></i> Toiletries</span>
             </div>
 
@@ -451,11 +431,10 @@
               <div class="price-col">
                 <span class="price-label" data-i18n="room.perNight">Per Night</span>
                 <span class="price-main" data-i18n="room.premium.price">৳ 4,500</span>
-                <span class="price-ref-usd" data-i18n="room.premium.ref">~$41.00 USD</span>
               </div>
               <div class="cancellation-note">
                 <i class="fas fa-check-circle"></i>
-                <span data-i18n="room.freeCancel">Free Cancellation</span>
+                <span data-i18n="room.freeCancel">Complimentary Cancellation</span>
               </div>
             </div>
 
@@ -481,18 +460,17 @@
             </div>
           </div>
           <div class="room-card-body">
-            <h3 class="room-type-title" data-i18n="room.triple.title">Triple Room / Family Suite</h3>
+            <h3 class="room-type-title" data-i18n="room.triple.title">Triple Family Suite</h3>
             <p class="room-short-desc" data-i18n="room.triple.desc">
-              Generously proportioned room tailored for families or small groups of up to three guests, featuring full climate control and seating area.
+              Generously proportioned family suite accommodating three guests with full climate control.
             </p>
 
             <!-- Amenities Chips -->
             <div class="room-amenity-chips">
               <span class="amenity-chip"><i class="fas fa-snowflake"></i> Split AC</span>
-              <span class="amenity-chip"><i class="fas fa-wifi"></i> Free Wi-Fi</span>
+              <span class="amenity-chip"><i class="fas fa-wifi"></i> Fiber Wi-Fi</span>
               <span class="amenity-chip"><i class="fas fa-tv"></i> HD TV</span>
               <span class="amenity-chip"><i class="fas fa-box"></i> Refrigerator</span>
-              <span class="amenity-chip"><i class="fas fa-pray"></i> Prayer Mat</span>
               <span class="amenity-chip"><i class="fas fa-couch"></i> Family Area</span>
             </div>
 
@@ -501,11 +479,10 @@
               <div class="price-col">
                 <span class="price-label" data-i18n="room.perNight">Per Night</span>
                 <span class="price-main" data-i18n="room.triple.price">৳ 3,850</span>
-                <span class="price-ref-usd" data-i18n="room.triple.ref">~$35.00 USD</span>
               </div>
               <div class="cancellation-note">
                 <i class="fas fa-check-circle"></i>
-                <span data-i18n="room.freeCancel">Free Cancellation</span>
+                <span data-i18n="room.freeCancel">Complimentary Cancellation</span>
               </div>
             </div>
 
@@ -531,12 +508,12 @@
     <div class="container">
       
       <div class="section-header">
-        <span class="section-tag" data-i18n="amenities.tag">Property Highlights</span>
+        <span class="section-tag" data-i18n="amenities.tag">Hospitality</span>
         <h2 class="section-title">
-          <span class="gold-text" data-i18n="amenities.title">Curated Amenities for a Seamless Stay</span>
+          <span class="gold-text" data-i18n="amenities.title">Curated Amenities</span>
         </h2>
         <p class="section-subtitle" data-i18n="amenities.subtitle">
-          Everything you need for a restful, productive visit to Rajshahi city.
+          Every detail considered for an effortless, restorative stay.
         </p>
       </div>
 
@@ -545,8 +522,8 @@
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-concierge-bell"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.fd.title">24-Hour Front Desk</h3>
-            <p data-i18n="amenity.fd.desc">Friendly reception staff ready to assist with check-in, local guidance, and transport any time of day or night.</p>
+            <h3 data-i18n="amenity.fd.title">24-Hour Concierge</h3>
+            <p data-i18n="amenity.fd.desc">Dedicated round-the-clock reception & local guidance.</p>
           </div>
         </div>
 
@@ -554,63 +531,63 @@
           <div class="amenity-icon-box"><i class="fas fa-wifi"></i></div>
           <div class="amenity-content">
             <h3 data-i18n="amenity.wifi.title">High-Speed Wi-Fi</h3>
-            <p data-i18n="amenity.wifi.desc">Uninterrupted fiber-optic wireless connectivity across all rooms and public lounges for work or entertainment.</p>
+            <p data-i18n="amenity.wifi.desc">Complimentary high-speed fiber throughout property.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-snowflake"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.ac.title">Air Conditioning</h3>
-            <p data-i18n="amenity.ac.desc">Whisper-quiet climate control in every room ensuring comfort through every Rajshahi season.</p>
+            <h3 data-i18n="amenity.ac.title">Climate Control</h3>
+            <p data-i18n="amenity.ac.desc">Whisper-quiet split air conditioning in every suite.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-utensils"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.dine.title">Restaurant & Room Service</h3>
-            <p data-i18n="amenity.dine.desc">Savory local Bengali dishes and breakfast delivered fresh to your room or enjoyed in our dining space.</p>
+            <h3 data-i18n="amenity.dine.title">In-Room Dining</h3>
+            <p data-i18n="amenity.dine.desc">Authentic regional cuisine & breakfast delivered fresh.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-pray"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.prayer.title">Prayer Mats & Direction</h3>
-            <p data-i18n="amenity.prayer.desc">Clean prayer mats and Qibla directional guidance readily provided in every guest room upon request.</p>
+            <h3 data-i18n="amenity.prayer.title">Prayer Facilities</h3>
+            <p data-i18n="amenity.prayer.desc">Clean prayer mats & Qibla directional guidance.</p>
           </div>
         </div>
 
         <div class="amenity-card">
-          <div class="amenity-icon-box"><i class="fas fa-users-cog"></i></div>
+          <div class="amenity-icon-box"><i class="fas fa-users"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.conf.title">Meeting & Banquet Space</h3>
-            <p data-i18n="amenity.conf.desc">Convenient space for business gatherings, family discussions, or corporate travel delegations.</p>
+            <h3 data-i18n="amenity.conf.title">Executive Gatherings</h3>
+            <p data-i18n="amenity.conf.desc">Convenient meeting area for corporate discussions.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-parking"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.park.title">Free Parking</h3>
-            <p data-i18n="amenity.park.desc">Safe motorcycle and car parking options with convenient access for all residing guests.</p>
+            <h3 data-i18n="amenity.park.title">Secure Parking</h3>
+            <p data-i18n="amenity.park.desc">Dedicated on-premise vehicle & motorcycle spaces.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-tshirt"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.clean.title">Daily Housekeeping & Laundry</h3>
-            <p data-i18n="amenity.clean.desc">Fresh linens, crisp towels, and express laundry and valet services whenever required.</p>
+            <h3 data-i18n="amenity.clean.title">Housekeeping</h3>
+            <p data-i18n="amenity.clean.desc">Daily linen refresh and professional valet care.</p>
           </div>
         </div>
 
         <div class="amenity-card">
           <div class="amenity-icon-box"><i class="fas fa-shield-alt"></i></div>
           <div class="amenity-content">
-            <h3 data-i18n="amenity.sec.title">24/7 Security & Safe</h3>
-            <p data-i18n="amenity.sec.desc">Round-the-clock surveillance cameras, electronic safety measures, and dedicated night security.</p>
+            <h3 data-i18n="amenity.sec.title">24/7 Monitored Safety</h3>
+            <p data-i18n="amenity.sec.desc">Comprehensive CCTV and round-the-clock safety.</p>
           </div>
         </div>
 
@@ -624,19 +601,19 @@
     <div class="container">
       
       <div class="section-header">
-        <span class="section-tag" data-i18n="gallery.tag">Visual Tour</span>
+        <span class="section-tag" data-i18n="gallery.tag">Visuals</span>
         <h2 class="section-title">
-          <span class="gold-text" data-i18n="gallery.title">Hotel Mukta International Gallery</span>
+          <span class="gold-text" data-i18n="gallery.title">Property Gallery</span>
         </h2>
         <p class="section-subtitle" data-i18n="gallery.subtitle">
-          Explore our real facade, welcoming reception lobby, and comfortable guest suites.
+          Real glimpses of our suites, reception, and exterior facade.
         </p>
       </div>
 
       <!-- Filter Tabs -->
       <div class="gallery-filter-tabs">
-        <button class="filter-btn active" data-filter="all" data-i18n="gallery.filter.all">All Photos</button>
-        <button class="filter-btn" data-filter="rooms" data-i18n="gallery.filter.rooms">Rooms</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="gallery.filter.all">All</button>
+        <button class="filter-btn" data-filter="rooms" data-i18n="gallery.filter.rooms">Suites</button>
         <button class="filter-btn" data-filter="lobby" data-i18n="gallery.filter.lobby">Lobby & Reception</button>
         <button class="filter-btn" data-filter="exterior" data-i18n="gallery.filter.exterior">Exterior</button>
       </div>
@@ -648,16 +625,16 @@
   </section>
 
   <!-- Location & Rajshahi City Guide Section -->
-  <section class="section" id="location" style="background: linear-gradient(180deg, #070a12 0%, #0c1221 50%, #070a12 100%);">
+  <section class="section" id="location">
     <div class="container">
       
       <div class="section-header">
-        <span class="section-tag" data-i18n="location.tag">City Location</span>
+        <span class="section-tag" data-i18n="location.tag">Location</span>
         <h2 class="section-title">
-          <span class="gold-text" data-i18n="location.title">Easily Accessible in Rajshahi</span>
+          <span class="gold-text" data-i18n="location.title">At the City's Epicenter</span>
         </h2>
         <p class="section-subtitle" data-i18n="location.subtitle">
-          Located at Batar More, Shaheb Bazar — placing you within minutes of Rajshahi's premier attractions, educational hubs, and transport terminals.
+          Positioned at Batar More, Shaheb Bazar with immediate access to Rajshahi's key destinations.
         </p>
       </div>
 
@@ -670,7 +647,7 @@
             <div>
               <h4 data-i18n="location.addressTitle">Hotel Mukta International</h4>
               <p>Batar More, Shaheb Bazar / Ganakpara, Rajshahi-6100, Bangladesh</p>
-              <p style="margin-top: 0.4rem; color: var(--gold-light); font-size: 0.85rem;">
+              <p style="margin-top: 0.4rem; color: var(--bronze-light); font-size: 0.85rem;">
                 <i class="fas fa-phone-alt"></i> +880 1711-302322 / +880 1758-355468
               </p>
             </div>
@@ -721,7 +698,7 @@
 
           <a href="https://maps.google.com/?q=24.366963,88.6003258" target="_blank" class="btn btn-outline-gold" id="locationMapsLink">
             <i class="fas fa-external-link-alt"></i>
-            <span data-i18n="location.dirBtn">Get Directions on Google Maps</span>
+            <span data-i18n="location.dirBtn">Directions on Google Maps</span>
           </a>
         </div>
 
@@ -745,12 +722,12 @@
     <div class="container">
       
       <div class="section-header">
-        <span class="section-tag" data-i18n="contact.tag">Get in Touch</span>
+        <span class="section-tag" data-i18n="contact.tag">Reservations</span>
         <h2 class="section-title">
-          <span class="gold-text" data-i18n="contact.title">Direct Reservations & Inquiries</span>
+          <span class="gold-text" data-i18n="contact.title">Direct Concierge Inquiries</span>
         </h2>
         <p class="section-subtitle" data-i18n="contact.subtitle">
-          We do not require online credit card payments on our website. Connect directly with our front desk team via WhatsApp or phone for immediate confirmation and best rates.
+          Connect directly with our reservation desk via WhatsApp or phone for immediate confirmation and best rates.
         </p>
       </div>
 
@@ -758,9 +735,9 @@
         
         <!-- Left: WhatsApp Booking Form -->
         <div class="whatsapp-inquiry-box">
-          <h3 class="box-title" data-i18n="contact.boxTitle">Personalized WhatsApp Booking</h3>
+          <h3 class="box-title" data-i18n="contact.boxTitle">WhatsApp Reservation Request</h3>
           <p class="box-desc" data-i18n="contact.boxDesc">
-            Select your dates and desired room below. Clicking send will open WhatsApp directly with our reservation desk with your request pre-typed.
+            Select your dates and desired suite below to connect directly with front desk.
           </p>
 
           <form id="contactWaForm">
@@ -768,7 +745,7 @@
               <div class="form-group">
                 <label class="form-label" for="contactName">
                   <i class="fas fa-user"></i>
-                  <span data-i18n="contact.guestName">Your Name</span>
+                  <span data-i18n="contact.guestName">Guest Name</span>
                 </label>
                 <div class="form-input-wrap">
                   <i class="fas fa-user input-icon"></i>
@@ -778,7 +755,7 @@
               <div class="form-group">
                 <label class="form-label" for="contactPhone">
                   <i class="fas fa-phone-alt"></i>
-                  <span data-i18n="contact.phone">Mobile Number</span>
+                  <span data-i18n="contact.phone">Mobile Contact</span>
                 </label>
                 <div class="form-input-wrap">
                   <i class="fas fa-phone input-icon"></i>
@@ -790,14 +767,14 @@
             <div class="form-group" style="margin-bottom: 1.25rem;">
               <label class="form-label" for="contactRoomSelect">
                 <i class="fas fa-bed"></i>
-                <span data-i18n="inquiry.room">Room Category</span>
+                <span data-i18n="inquiry.room">Suite Category</span>
               </label>
               <div class="form-input-wrap">
                 <i class="fas fa-door-open input-icon"></i>
                 <select id="contactRoomSelect" class="form-control">
-                  <option value="Deluxe Twin Room (৳3,400)">Deluxe Twin Room (৳3,400 / $31)</option>
-                  <option value="Premium Twin Room (৳4,500)">Premium Twin Room (৳4,500 / $41)</option>
-                  <option value="Triple Room / Family Suite (৳3,850)">Triple Room / Family Suite (৳3,850 / $35)</option>
+                  <option value="Deluxe Twin Room (৳3,400)">Deluxe Twin Room (৳3,400)</option>
+                  <option value="Premium Twin Room (৳4,500)">Premium Twin Room (৳4,500)</option>
+                  <option value="Triple Room / Family Suite (৳3,850)">Triple Family Suite (৳3,850)</option>
                   <option value="General Inquiry">General Accommodation Inquiry</option>
                 </select>
               </div>
@@ -807,7 +784,7 @@
               <div class="form-group">
                 <label class="form-label" for="contactCheckin">
                   <i class="far fa-calendar-alt"></i>
-                  <span data-i18n="inquiry.checkin">Check-In Date</span>
+                  <span data-i18n="inquiry.checkin">Check-In</span>
                 </label>
                 <div class="form-input-wrap">
                   <i class="far fa-calendar-alt input-icon"></i>
@@ -817,7 +794,7 @@
               <div class="form-group">
                 <label class="form-label" for="contactCheckout">
                   <i class="far fa-calendar-alt"></i>
-                  <span data-i18n="inquiry.checkout">Check-Out Date</span>
+                  <span data-i18n="inquiry.checkout">Check-Out</span>
                 </label>
                 <div class="form-input-wrap">
                   <i class="far fa-calendar-alt input-icon"></i>
@@ -833,13 +810,13 @@
               </label>
               <div class="form-input-wrap">
                 <i class="fas fa-comment-alt input-icon"></i>
-                <input type="text" id="contactNote" class="form-control" placeholder="Early check-in, extra pillows, transport...">
+                <input type="text" id="contactNote" class="form-control" placeholder="Arrival time, extra bedding, parking...">
               </div>
             </div>
 
-            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 1.1rem;" id="contactWaSubmitBtn">
-              <i class="fab fa-whatsapp" style="font-size: 1.3rem;"></i>
-              <span data-i18n="contact.sendWa">Send Inquiry to WhatsApp (01711302322)</span>
+            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 1rem;" id="contactWaSubmitBtn">
+              <i class="fab fa-whatsapp"></i>
+              <span data-i18n="contact.sendWa">Send Reservation Inquiry</span>
             </button>
           </form>
         </div>
@@ -851,7 +828,7 @@
           <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20booking." target="_blank" class="channel-card">
             <div class="channel-icon wa"><i class="fab fa-whatsapp"></i></div>
             <div class="channel-info">
-              <h4 data-i18n="contact.hotlineTitle">Primary WhatsApp Hotline</h4>
+              <h4 data-i18n="contact.hotlineTitle">Primary WhatsApp Concierge</h4>
               <span class="channel-val">+880 1711-302322</span>
               <span class="channel-sub">Instant response & reservation confirmation</span>
             </div>
@@ -861,9 +838,9 @@
           <a href="tel:+8801758355468" class="channel-card">
             <div class="channel-icon"><i class="fas fa-phone-volume"></i></div>
             <div class="channel-info">
-              <h4 data-i18n="contact.phoneTitle">Front Desk Landline / Mobile</h4>
+              <h4 data-i18n="contact.phoneTitle">Front Desk 24/7 Hotline</h4>
               <span class="channel-val">01758-355468</span>
-              <span class="channel-sub">24/7 round-the-clock reception desk</span>
+              <span class="channel-sub">Round-the-clock reception desk</span>
             </div>
           </a>
 
@@ -871,9 +848,9 @@
           <a href="mailto:hotelmuktainternational@gmail.com?subject=Room%20Reservation%20Inquiry" class="channel-card">
             <div class="channel-icon"><i class="fas fa-envelope"></i></div>
             <div class="channel-info">
-              <h4 data-i18n="contact.emailTitle">Email Inquiry</h4>
+              <h4 data-i18n="contact.emailTitle">Corporate & Group Bookings</h4>
               <span class="channel-val">hotelmuktainternational@gmail.com</span>
-              <span class="channel-sub">Corporate & group bookings</span>
+              <span class="channel-sub">Tailored business delegacy rates</span>
             </div>
           </a>
 
@@ -881,8 +858,8 @@
           <div class="channel-card">
             <div class="channel-icon"><i class="fas fa-map-pin"></i></div>
             <div class="channel-info">
-              <h4 data-i18n="contact.addrTitle">Hotel Address</h4>
-              <span class="channel-val" style="font-size: 1.05rem;">Batar More, Shaheb Bazar / Ganakpara</span>
+              <h4 data-i18n="contact.addrTitle">Property Address</h4>
+              <span class="channel-val" style="font-size: 0.95rem;">Batar More, Shaheb Bazar / Ganakpara</span>
               <span class="channel-sub">Rajshahi-6100, Rajshahi City, Bangladesh</span>
             </div>
           </div>
@@ -903,20 +880,20 @@
         <!-- Brand Info -->
         <div class="footer-brand">
           <div class="brand-logo">
-            <div class="logo-crest"><i class="fas fa-crown"></i></div>
+            <div class="logo-monogram">HM</div>
             <div class="logo-text-block">
-              <span class="logo-name">HOTEL MUKTA <span>INT.</span></span>
-              <span class="logo-sub">হোটেল মুক্তা ইন্টারন্যাশনাল</span>
+              <span class="logo-name">MUKTA <span>INTERNATIONAL</span></span>
+              <span class="logo-sub">Hotel & Hospitality • Rajshahi</span>
             </div>
           </div>
           <p>
-            Providing refined, welcoming hospitality in Rajshahi city. Conveniently positioned near Batar More and Shaheb Bazar, offering comfortable air-conditioned suites with 24/7 personalized service.
+            An intimate sanctuary pairing warm Bengali hospitality with modern serenity in the commercial heart of Rajshahi city.
           </p>
           <div style="display: flex; gap: 0.8rem;">
-            <a href="https://wa.me/8801711302322" target="_blank" class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+            <a href="https://wa.me/8801711302322" target="_blank" class="btn btn-whatsapp" style="padding: 0.5rem 1rem; font-size: 0.82rem;">
               <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
-            <a href="tel:+8801711302322" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.85rem;">
+            <a href="tel:+8801711302322" class="btn btn-ghost" style="padding: 0.5rem 1rem; font-size: 0.82rem;">
               <i class="fas fa-phone-alt"></i> Call
             </a>
           </div>
@@ -927,10 +904,10 @@
           <h4>Navigation</h4>
           <ul class="footer-links-list">
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">About the Hotel</a></li>
-            <li><a href="#rooms">Rooms & Rates</a></li>
+            <li><a href="#about">The Property</a></li>
+            <li><a href="#rooms">Accommodations</a></li>
             <li><a href="#amenities">Guest Amenities</a></li>
-            <li><a href="#gallery">Photo Gallery</a></li>
+            <li><a href="#gallery">Property Gallery</a></li>
             <li><a href="#location">Rajshahi Location</a></li>
           </ul>
         </div>
@@ -941,8 +918,8 @@
           <ul class="footer-links-list">
             <li><a href="#rooms" onclick="openRoomModal('deluxe'); return false;">Deluxe Twin Room</a></li>
             <li><a href="#rooms" onclick="openRoomModal('premium'); return false;">Premium Twin Room</a></li>
-            <li><a href="#rooms" onclick="openRoomModal('triple'); return false;">Triple Room / Family</a></li>
-            <li><a href="#contact">Corporate Group Bookings</a></li>
+            <li><a href="#rooms" onclick="openRoomModal('triple'); return false;">Triple Family Suite</a></li>
+            <li><a href="#contact">Corporate Delegacies</a></li>
             <li><a href="#contact">Direct WhatsApp Rate</a></li>
           </ul>
         </div>
@@ -964,7 +941,7 @@
           </div>
           <div class="footer-contact-item">
             <i class="fas fa-clock"></i>
-            <span>Front Desk: Open 24/7 All Days</span>
+            <span>Front Desk: 24/7 Monitored</span>
           </div>
         </div>
 
@@ -972,11 +949,11 @@
 
       <div class="footer-bottom-bar">
         <div>
-          &copy; 2026 Hotel Mukta International (হোটেল মুক্তা ইন্টারন্যাশনাল). All rights reserved.
+          &copy; 2026 Hotel Mukta International. All rights reserved.
         </div>
         <div style="display: flex; gap: 1.5rem;">
           <a href="#home">Back to Top ↑</a>
-          <a href="#contact">WhatsApp Reservation</a>
+          <a href="#contact">Concierge Reservation</a>
         </div>
       </div>
 
@@ -989,9 +966,9 @@
       <i class="fas fa-chevron-up"></i>
     </button>
 
-    <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20room%20availability." target="_blank" class="floating-wa-btn" id="floatingWaBtn" title="Chat on WhatsApp">
+    <a href="https://wa.me/8801711302322?text=Hello%20Hotel%20Mukta%20International%2C%20I%20would%20like%20to%20inquire%20about%20suite%20availability." target="_blank" class="floating-wa-btn" id="floatingWaBtn" title="Chat on WhatsApp">
       <i class="fab fa-whatsapp"></i>
-      <span data-i18n="floating.wa">Chat & Book</span>
+      <span data-i18n="floating.wa">Concierge</span>
     </a>
   </div>
 
@@ -1025,7 +1002,7 @@
 
       <button id="modalRoomWaBtn" class="btn btn-whatsapp modal-wa-btn">
         <i class="fab fa-whatsapp"></i>
-        <span data-i18n="modal.waBook">Book This Room on WhatsApp</span>
+        <span data-i18n="modal.waBook">Reserve This Suite on WhatsApp</span>
       </button>
     </div>
   </div>
