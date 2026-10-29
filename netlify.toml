@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"
+  command = "echo 'Deploying prebuilt production bundle from dist'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

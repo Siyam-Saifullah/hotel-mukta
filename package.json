@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
-    "build": "vite build",
-    "clean": "rm -rf dist",
+    "build": "vite build && rm -rf assets && cp -r dist/assets .",
+    "clean": "rm -rf dist assets",
     "lint": "tsc --noEmit"
   },
   "dependencies": {

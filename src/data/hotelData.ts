@@ -18,9 +18,8 @@ export interface RoomSpec {
   bedConfigBn: string;
   viewEn: string;
   viewBn: string;
-  floorToneEn: string;
-  floorToneBn: string;
-  swatchHex: string;
+  highlightEn: string;
+  highlightBn: string;
   image: string;
   secondaryImages: string[];
   amenitiesEn: string[];
@@ -35,9 +34,8 @@ export interface GalleryPhoto {
   titleBn: string;
   locationEn: string;
   locationBn: string;
-  dominantColor: string;
-  paletteNameEn: string;
-  paletteNameBn: string;
+  subtitleEn: string;
+  subtitleBn: string;
 }
 
 export interface LandmarkItem {
@@ -71,67 +69,28 @@ export const HOTEL_CONTACT = {
     'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14537.64846388118!2d88.6003258!3d24.366963!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x12e8f4ba52bca12!2sHotel%20Mukta%20International!5e0!3m2!1sen!2sbd!4v1667915266465!5m2!1sen!2sbd',
 };
 
-export const ROOM_PALETTE_SWATCHES = [
-  {
-    hex: '#2E1F29',
-    nameEn: 'Evening Aubergine',
-    nameBn: 'সন্ধ্যার বেগুনি আভা',
-    sourceEn: 'Lobby Velvet & Ambient Shadows',
-    sourceBn: 'লবি ভেলভেট ও আবছা আলো',
-  },
-  {
-    hex: '#382226',
-    nameEn: 'Aged Mahogany',
-    nameBn: 'মেহগনি কাঠের রঙ',
-    sourceEn: 'Handcrafted Suite Headboards',
-    sourceBn: 'স্যুটের কাঠের কারুকাজ',
-  },
-  {
-    hex: '#521F2C',
-    nameEn: 'Rajshahi Mulberry Silk',
-    nameBn: 'রাজশাহী সিল্ক মেরুন',
-    sourceEn: 'Suite Drapery & Upholstered Seating',
-    sourceBn: 'পর্দা ও প্রিমিয়াম সোফা',
-  },
-  {
-    hex: '#6A302B',
-    nameEn: 'Varendra Terracotta',
-    nameBn: 'বরেন্দ্র টেরাকোটা',
-    sourceEn: 'Reception Stone & Warm Timber',
-    sourceBn: 'রিসেপশন ও উষ্ণ কাঠের ফিনিশ',
-  },
-  {
-    hex: '#A36E4A',
-    nameEn: 'Burnished Teak Bronze',
-    nameBn: 'বার্নিশড সেগুন ও ব্রোঞ্জ',
-    sourceEn: 'Warm Brass Sconces & Trim',
-    sourceBn: 'ব্রোঞ্জ লাইটিং ও সেগুন কাঠ',
-  },
-];
-
 export const ROOMS_DATA: RoomSpec[] = [
   {
     id: 'deluxe',
     index: '01',
-    nameEn: 'Deluxe Twin Sanctuary',
-    nameBn: 'ডিলাক্স টুইন স্যুট',
-    taglineEn: 'Tailored for business travelers and restful twin stays',
+    nameEn: 'Deluxe Twin Room',
+    nameBn: 'ডিলাক্স টুইন রুম',
+    taglineEn: 'Ideal for business travelers and comfortable twin stays',
     taglineBn: 'ব্যবসায়িক ভ্রমণ ও দুইজন অতিথির প্রশান্তির জন্য আদর্শ',
     descEn:
-      'Appointed with handcrafted mahogany twin beds, crisp woven linens, a dedicated executive work desk with multi-standard outlets, and whisper-quiet split climate control.',
+      'Well-appointed twin room featuring two comfortable single beds, crisp fresh linens, an executive work desk with power outlets, high-speed Wi-Fi, and quiet split air conditioning.',
     descBn:
-      'মেহগনি কাঠের দুটি আরামদায়ক সিঙ্গেল বেড, পরিপাটি বিছানা, কাজের টেবিল, দ্রুতগতির ওয়াই-ফাই এবং নীরব স্প্লিট এসি সম্বলিত শান্ত পরিবেশ।',
+      'দুটি আরামদায়ক সিঙ্গেল বেড, পরিপাটি বিছানা, কাজের টেবিল, দ্রুতগতির ওয়াই-ফাই এবং নীরব স্প্লিট এসি সম্বলিত শান্ত ও পরিচ্ছন্ন রুম।',
     priceBdt: 3400,
     priceUsd: 31,
     sizeSqFt: 220,
     maxGuests: 2,
     bedConfigEn: '2 Single Twin Beds',
     bedConfigBn: '২টি সিঙ্গেল বেড',
-    viewEn: 'Shaheb Bazar Cityscape',
+    viewEn: 'Shaheb Bazar City View',
     viewBn: 'সাহেব বাজার সিটি ভিউ',
-    floorToneEn: 'Teak & Warm Ivory',
-    floorToneBn: 'সেগুন ও আইভরি আবহ',
-    swatchHex: '#A36E4A',
+    highlightEn: 'Breakfast & Wi-Fi Included',
+    highlightBn: 'নাস্তা ও ওয়াই-ফাই অন্তর্ভুক্ত',
     image:
       'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_deluxetwin_hotelplacer.com.jpg',
     secondaryImages: [
@@ -140,7 +99,7 @@ export const ROOMS_DATA: RoomSpec[] = [
       'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_reception_hotelplacer.com.jpg',
     ],
     amenitiesEn: [
-      'Whisper-Quiet Split Air Conditioning',
+      'Split Air Conditioning',
       'Complimentary High-Speed Fiber Wi-Fi',
       'HD Flat-Panel Satellite Television',
       'Executive Work Desk with Power Outlets',
@@ -150,7 +109,7 @@ export const ROOMS_DATA: RoomSpec[] = [
       'Complimentary Morning Breakfast',
     ],
     amenitiesBn: [
-      'নীরব স্প্লিট এয়ার কন্ডিশনার',
+      'স্প্লিট এয়ার কন্ডিশনার',
       'ফ্রি হাই-স্পিড ফাইবার ওয়াই-ফাই',
       'এইচডি ফ্ল্যাট প্যানেল স্যাটেলাইট টিভি',
       'ইলেকট্রিক সকেটসহ এক্সিকিউটিভ টেবিল',
@@ -163,14 +122,14 @@ export const ROOMS_DATA: RoomSpec[] = [
   {
     id: 'premium',
     index: '02',
-    nameEn: 'Premium Twin Residence',
-    nameBn: 'প্রিমিয়াম টুইন রেসিডেন্স',
-    taglineEn: 'Elevated proportions with rich mulberry-toned upholstery',
+    nameEn: 'Premium Twin Room',
+    nameBn: 'প্রিমিয়াম টুইন রুম',
+    taglineEn: 'Spacious executive layout with upgraded furnishings',
     taglineBn: 'সুপ্রশস্ত পরিসর ও প্রিমিয়াম আসবাবপত্রের আভিজাত্য',
     descEn:
-      'Our flagship twin category pairs warm teak cabinetry and deep burgundy drapery with generous lounging space, plush orthopedic mattresses, and priority room dining.',
+      'Our flagship twin accommodation offers generous floor space, upgraded orthopedic mattresses, premium seating, in-room refrigerator, and priority 24-hour room service.',
     descBn:
-      'উন্নত সেগুন কাঠের আসবাব, মেরুন পর্দা, অর্থোপেডিক ম্যাট্রেস, প্রশস্ত বসার জায়গা এবং প্রিমিয়াম বাথরুম সুবিধাসহ আমাদের অন্যতম সেরা স্যুট।',
+      'উন্নত আসবাবপত্র, অর্থোপেডিক ম্যাট্রেস, প্রশস্ত বসার জায়গা, রেফ্রিজারেটর এবং প্রিমিয়াম বাথরুম সুবিধাসহ আমাদের অন্যতম সেরা রুম।',
     priceBdt: 4500,
     priceUsd: 41,
     sizeSqFt: 260,
@@ -179,9 +138,8 @@ export const ROOMS_DATA: RoomSpec[] = [
     bedConfigBn: '২টি প্রিমিয়াম বেড',
     viewEn: 'Batar More Avenue View',
     viewBn: 'বাটার মোড় অ্যাভিনিউ ভিউ',
-    floorToneEn: 'Mulberry Wine & Bronze',
-    floorToneBn: 'মালবেরি ও ব্রোঞ্জ আবহ',
-    swatchHex: '#521F2C',
+    highlightEn: 'Most Popular · Executive Comfort',
+    highlightBn: 'সবচেয়ে জনপ্রিয় · প্রিমিয়াম সুবিধা',
     image:
       'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_premiumtwin_hotelplacer.com.jpg',
     secondaryImages: [
@@ -190,7 +148,7 @@ export const ROOMS_DATA: RoomSpec[] = [
       'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_exterior_hotelplacer.com.jpg',
     ],
     amenitiesEn: [
-      'Precision Split Climate Control',
+      'Quiet Split Air Conditioning',
       'High-Speed Dedicated Fiber Wi-Fi',
       'HD Television with International Channels',
       'Full-Size Executive Writing Desk',
@@ -200,7 +158,7 @@ export const ROOMS_DATA: RoomSpec[] = [
       'Upgraded Bath Amenities & 24h Room Service',
     ],
     amenitiesBn: [
-      'উন্নত স্প্লিট এয়ার কন্ডিশনিং',
+      'নীরব স্প্লিট এয়ার কন্ডিশনিং',
       'হাই-স্পিড ফাইবার ওয়াই-ফাই ইন্টারনেট',
       'আন্তর্জাতিক চ্যানেলসহ এইচডি টেলিভিশন',
       'প্রশস্ত রিডিং ও ওয়ার্ক ডেস্ক',
@@ -218,7 +176,7 @@ export const ROOMS_DATA: RoomSpec[] = [
     taglineEn: 'Spacious multi-bed layout crafted for families and groups',
     taglineBn: 'পরিবার কিংবা তিনজন অতিথির একত্রে আবাসনের প্রশস্ত স্যুট',
     descEn:
-      'Designed for families and visiting delegations, featuring three full beds, expansive luggage and wardrobe storage, heavy-duty climate control, and a private geyser bath.',
+      'Designed for families and visiting groups, featuring three comfortable beds, expansive luggage and wardrobe storage, powerful air conditioning, and a private geyser bathroom.',
     descBn:
       'পরিবার বা তিনজন অতিথির আরামদায়ক আবাসনের জন্য তিনটি বেড, প্রশস্ত ওয়্যারড্রোব, শক্তিশালী এসি এবং গিজারযুক্ত বাথরুম সম্বলিত ফ্যামিলি স্যুট।',
     priceBdt: 3850,
@@ -227,11 +185,10 @@ export const ROOMS_DATA: RoomSpec[] = [
     maxGuests: 3,
     bedConfigEn: '3 Beds (Family Setup)',
     bedConfigBn: '৩টি বেড (ফ্যামিলি সেটআপ)',
-    viewEn: 'Quiet Courtyard & City View',
+    viewEn: 'Quiet City View',
     viewBn: 'শান্ত সিটি ভিউ',
-    floorToneEn: 'Mahogany & Warm Travertine',
-    floorToneBn: 'মেহগনি ও উষ্ণ ট্র্যাভার্টিন',
-    swatchHex: '#6A302B',
+    highlightEn: 'Ideal for Families & Groups',
+    highlightBn: 'পরিবার ও গ্রুপের জন্য আদর্শ',
     image:
       'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_triple_hotelplacer.com.jpeg',
     secondaryImages: [
@@ -264,64 +221,26 @@ export const ROOMS_DATA: RoomSpec[] = [
 
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
-    id: 'ext-main',
-    category: 'exterior',
-    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_exterior_hotelplacer.com.jpg',
-    titleEn: 'Hotel Mukta International Facade',
-    titleBn: 'হোটেল মুক্তা ইন্টারন্যাশনাল ভবন',
-    locationEn: 'Batar More, Shaheb Bazar',
-    locationBn: 'বাটার মোড়, সাহেব বাজার',
-    dominantColor: '#382226',
-    paletteNameEn: 'Warm Brick & Twilight Bronze',
-    paletteNameBn: 'ইটের উষ্ণতা ও গোধূলি ব্রোঞ্জ',
-  },
-  {
     id: 'suite-premium',
     category: 'suites',
     url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_premiumtwin_hotelplacer.com.jpg',
-    titleEn: 'Premium Twin Residence',
-    titleBn: 'প্রিমিয়াম টুইন রেসিডেন্স',
-    locationEn: '260 sq.ft · Luxury Twin',
-    locationBn: '২৬০ বর্গফুট · প্রিমিয়াম টুইন',
-    dominantColor: '#521F2C',
-    paletteNameEn: 'Mulberry Wine & Crisp Linen',
-    paletteNameBn: 'মালবেরি মেরুন ও শুভ্র লিনেন',
-  },
-  {
-    id: 'lobby-reception',
-    category: 'lobby',
-    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_reception_hotelplacer.com.jpg',
-    titleEn: '24-Hour Concierge & Front Desk',
-    titleBn: '২৪ ঘণ্টা ফ্রন্ট ডেস্ক ও রিসেপশন',
-    locationEn: 'Ground Floor Sanctuary',
-    locationBn: 'গ্রাউন্ড ফ্লোর অভ্যর্থনা কক্ষ',
-    dominantColor: '#A36E4A',
-    paletteNameEn: 'Burnished Teak & Golden Sconce',
-    paletteNameBn: 'বার্নিশড সেগুন ও সোনালি আলো',
+    titleEn: 'Premium Twin Room',
+    titleBn: 'প্রিমিয়াম টুইন রুম',
+    locationEn: '260 sq.ft · 2 Luxury Twin Beds',
+    locationBn: '২৬০ বর্গফুট · ২টি প্রিমিয়াম বেড',
+    subtitleEn: 'Air-Conditioned Executive Accommodation',
+    subtitleBn: 'শীতাতপ নিয়ন্ত্রিত প্রিমিয়াম আবাসন',
   },
   {
     id: 'suite-deluxe',
     category: 'suites',
     url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_deluxetwin_hotelplacer.com.jpg',
-    titleEn: 'Deluxe Twin Sanctuary',
-    titleBn: 'ডিলাক্স টুইন স্যুট',
-    locationEn: '220 sq.ft · Executive Twin',
-    locationBn: '২২০ বর্গফুট · ডিলাক্স টুইন',
-    dominantColor: '#6A302B',
-    paletteNameEn: 'Mahogany Wood & Warm Alabaster',
-    paletteNameBn: 'মেহগনি কাঠ ও উষ্ণ দেয়াল',
-  },
-  {
-    id: 'lobby-lounge',
-    category: 'lobby',
-    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_lobby_hotelplacer.com.jpg',
-    titleEn: 'Guest Waiting Lounge & Salon',
-    titleBn: 'গেস্ট লাউঞ্জ ও বিশ্রাম কক্ষ',
-    locationEn: 'Reception Concourse',
-    locationBn: 'রিসেপশন লাউঞ্জ',
-    dominantColor: '#2E1F29',
-    paletteNameEn: 'Deep Aubergine & Plush Velvet',
-    paletteNameBn: 'গাঢ় বেগুনি ও ভেলভেট সোফা',
+    titleEn: 'Deluxe Twin Room',
+    titleBn: 'ডিলাক্স টুইন রুম',
+    locationEn: '220 sq.ft · 2 Single Twin Beds',
+    locationBn: '২২০ বর্গফুট · ২টি সিঙ্গেল বেড',
+    subtitleEn: 'Comfortable Twin Bedding & Work Desk',
+    subtitleBn: 'আরামদায়ক টুইন বেড ও ওয়ার্ক ডেস্ক',
   },
   {
     id: 'suite-triple',
@@ -329,23 +248,54 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_triple_hotelplacer.com.jpeg',
     titleEn: 'Triple Family Suite',
     titleBn: 'ট্রিপল ফ্যামিলি স্যুট',
-    locationEn: '290 sq.ft · 3-Bed Suite',
+    locationEn: '290 sq.ft · 3 Beds for Families',
     locationBn: '২৯০ বর্গফুট · ৩ বেড ফ্যামিলি স্যুট',
-    dominantColor: '#A36E4A',
-    paletteNameEn: 'Caramel Bronze & Silk Ivory',
-    paletteNameBn: 'কারামেল ব্রোঞ্জ ও সিল্ক আইভরি',
+    subtitleEn: 'Spacious Suite for 3 Guests',
+    subtitleBn: '৩ জন অতিথির জন্য সুপ্রশস্ত স্যুট',
+  },
+  {
+    id: 'lobby-reception',
+    category: 'lobby',
+    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_reception_hotelplacer.com.jpg',
+    titleEn: '24-Hour Front Desk & Reception',
+    titleBn: '২৪ ঘণ্টা ফ্রন্ট ডেস্ক ও রিসেপশন',
+    locationEn: 'Ground Floor Concierge',
+    locationBn: 'গ্রাউন্ড ফ্লোর অভ্যর্থনা কক্ষ',
+    subtitleEn: 'Instant Check-In & Guest Assistance',
+    subtitleBn: 'তাৎক্ষণিক চেক-ইন ও অতিথি সেবা',
+  },
+  {
+    id: 'lobby-lounge',
+    category: 'lobby',
+    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_lobby_hotelplacer.com.jpg',
+    titleEn: 'Guest Waiting Lounge',
+    titleBn: 'গেস্ট লাউঞ্জ ও বিশ্রাম কক্ষ',
+    locationEn: 'Main Lobby Concourse',
+    locationBn: 'প্রধান লবি লাউঞ্জ',
+    subtitleEn: 'Welcoming Seating Area for Visitors',
+    subtitleBn: 'অতিথিদের জন্য আরামদায়ক লাউঞ্জ',
+  },
+  {
+    id: 'ext-main',
+    category: 'exterior',
+    url: 'https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_exterior_hotelplacer.com.jpg',
+    titleEn: 'Hotel Mukta International Building',
+    titleBn: 'হোটেল মুক্তা ইন্টারন্যাশনাল ভবন',
+    locationEn: 'Batar More, Shaheb Bazar',
+    locationBn: 'বাটার মোড়, সাহেব বাজার',
+    subtitleEn: 'Prime Commercial Location in Rajshahi',
+    subtitleBn: 'রাজশাহী শহরের মূল বাণিজ্যিক কেন্দ্রে',
   },
   {
     id: 'ext-city',
     category: 'exterior',
     url: 'https://lh3.googleusercontent.com/grass-cs/AABkmLfo00ythjjsv_Y9mMEHYBMw1G0I_wi3ta9t0jCyQkeTpm5DhBetOHs5kCO8OZHJSfu-ExayPOU64r2FltXQGZaWW5Dnvar8IyQJ4xuqG9x0HNPT_HaFCLxMj_ioGUK4zPymJlSG=w1200-h800-k-no',
-    titleEn: 'Batar More Commercial District',
-    titleBn: 'বাটার মোড় বাণিজ্যিক কেন্দ্র',
-    locationEn: 'Heart of Rajshahi City',
+    titleEn: 'Shaheb Bazar & Batar More Area',
+    titleBn: 'সাহেব বাজার ও বাটার মোড় এলাকা',
+    locationEn: 'Central Rajshahi City',
     locationBn: 'রাজশাহী শহরের প্রাণকেন্দ্র',
-    dominantColor: '#382226',
-    paletteNameEn: 'Evening Slate & Amber Streetlight',
-    paletteNameBn: 'সন্ধ্যার স্লেট ও অ্যাম্বার আলো',
+    subtitleEn: 'Immediate Access to Shopping & Transit',
+    subtitleBn: 'শপিং ও যাতায়াতের সর্বোত্তম সুবিধা',
   },
 ];
 
@@ -360,7 +310,7 @@ export const LANDMARKS_DATA: LandmarkItem[] = [
     distanceTimeEn: '5 mins drive',
     distanceTimeBn: '৫ মিনিট দূরত্ব',
     distanceKm: '1.4 km',
-    descEn: 'Walk along the breeze-swept Padma riverfront, sunset tea stalls, and scenic embankments just south of Shaheb Bazar.',
+    descEn: 'Walk along the breeze-swept Padma riverfront, sunset viewpoints, and scenic embankments just south of Shaheb Bazar.',
     descBn: 'সাহেব বাজারের কাছেই পদ্মা নদীর নির্মল বাতাস, সূর্যাস্তের দৃশ্য এবং মনোরম হাঁটার পথ।',
   },
   {
@@ -424,7 +374,7 @@ export const AMENITIES_LIST = [
     titleBn: '২৪ ঘণ্টা ফ্রন্ট ডেস্ক ও অভ্যর্থনা',
     detailEn: 'Round-the-clock check-in assistance, local transport coordination, and immediate guest support at any hour.',
     detailBn: 'দিন-রাত ২৪ ঘণ্টা চেক-ইন সহায়তা, স্থানীয় যাতায়াত ব্যবস্থা এবং তাৎক্ষণিক রিসেপশন সেবা।',
-    metricEn: '24 / 7 Monitored Desk',
+    metricEn: '24 / 7 Reception',
     metricBn: 'সার্বক্ষণিক অভ্যর্থনা',
   },
   {
@@ -433,8 +383,8 @@ export const AMENITIES_LIST = [
     titleBn: 'স্প্লিট এসি ও ফাইবার ওয়াই-ফাই',
     detailEn: 'Every guest room is equipped with whisper-quiet split air conditioning and high-speed fiber internet across all floors.',
     detailBn: 'প্রতিটি রুমে নীরব স্প্লিট এয়ার কন্ডিশনিং এবং সব ফ্লোরে নিরবচ্ছিন্ন হাই-স্পিড ওয়াই-ফাই সুবিধা।',
-    metricEn: '100% AC Suites',
-    metricBn: 'শতভাগ এসি স্যুট',
+    metricEn: '100% AC Rooms',
+    metricBn: 'শতভাগ এসি রুম',
   },
   {
     index: '03',
@@ -451,7 +401,7 @@ export const AMENITIES_LIST = [
     titleBn: 'নিরাপদ পার্কিং ও ২৪/৭ সিসিটিভি নিরাপত্তা',
     detailEn: 'Dedicated indoor parking for private vehicles and motorcycles guarded by 24/7 CCTV surveillance and security staff.',
     detailBn: 'গাড়ি ও মোটরসাইকেলের জন্য নিজস্ব নিরাপদ পার্কিং এবং ২৪ ঘণ্টা সিসিটিভি ক্যামেরা ও প্রহরী নিরাপত্তা।',
-    metricEn: 'Complimentary Parking',
+    metricEn: 'Free Private Parking',
     metricBn: 'ফ্রি নিরাপদ পার্কিং',
   },
   {
@@ -460,8 +410,8 @@ export const AMENITIES_LIST = [
     titleBn: 'জায়নামাজ ও ইবাদতের সুব্যবস্থা',
     detailEn: 'Clean prayer mats and accurate Qibla directional markings thoughtfully provided in every guest suite.',
     detailBn: 'অতিথিদের সুবিধার্থে প্রতিটি রুমে পরিচ্ছন্ন জায়নামাজ ও সঠিক কিবলা দিকনির্দেশনা।',
-    metricEn: 'In-Suite Prayer Setup',
-    metricBn: 'রুমের ভেতরেই সুব্যবস্থা',
+    metricEn: 'In-Room Prayer Mats',
+    metricBn: 'রুমেই জায়নামাজ সুবিধা',
   },
   {
     index: '06',
@@ -491,9 +441,9 @@ export function buildWhatsAppUrl(params: {
 
   if (isBn) {
     lines.push('আসসালামু আলাইকুম হোটেল মুক্তা ইন্টারন্যাশনাল,');
-    lines.push('আমি আপনাদের হোটেলে একটি স্যুট রিজার্ভেশন করতে আগ্রহী:');
+    lines.push('আমি আপনাদের হোটেলে একটি রুম রিজার্ভেশন করতে আগ্রহী:');
     lines.push('');
-    lines.push(`• স্যুট: ${params.roomName}`);
+    lines.push(`• রুমের ধরন: ${params.roomName}`);
     if (params.checkIn) lines.push(`• চেক-ইন: ${params.checkIn}`);
     if (params.checkOut) lines.push(`• চেক-আউট: ${params.checkOut} (${params.nights} রাত)`);
     if (params.guests) lines.push(`• অতিথি সংখ্যা: ${params.guests}`);
@@ -505,9 +455,9 @@ export function buildWhatsAppUrl(params: {
     lines.push('অনুগ্রহ করে রুমের প্রাপ্যতা ও বুকিং কনফার্মেশন জানাবেন। ধন্যবাদ।');
   } else {
     lines.push('Hello Hotel Mukta International,');
-    lines.push('I would like to request a direct reservation with the front desk:');
+    lines.push('I would like to request a room reservation with the front desk:');
     lines.push('');
-    lines.push(`• Suite: ${params.roomName}`);
+    lines.push(`• Room Category: ${params.roomName}`);
     if (params.checkIn) lines.push(`• Check-in: ${params.checkIn}`);
     if (params.checkOut) lines.push(`• Check-out: ${params.checkOut} (${params.nights} ${params.nights === 1 ? 'night' : 'nights'})`);
     if (params.guests) lines.push(`• Guests: ${params.guests}`);

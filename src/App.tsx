@@ -1,34 +1,19 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import {
-  Calendar,
-  Users,
   ArrowUpRight,
-  Phone,
-  MapPin,
   Check,
   Copy,
   X,
   ChevronLeft,
   ChevronRight,
-  Sparkles,
-  Clock,
-  ShieldCheck,
-  Wifi,
-  Wind,
-  Coffee,
-  Car,
   Compass,
-  Mail,
-  MessageSquare,
   Maximize2,
 } from 'lucide-react';
 import {
   Language,
   Currency,
   RoomSpec,
-  GalleryPhoto,
   HOTEL_CONTACT,
-  ROOM_PALETTE_SWATCHES,
   ROOMS_DATA,
   GALLERY_PHOTOS,
   LANDMARKS_DATA,
@@ -65,7 +50,7 @@ export default function App() {
   const [guestPhone, setGuestPhone] = useState<string>('');
   const [specialNotes, setSpecialNotes] = useState<string>('');
 
-  // Interactive Hero Photo & Palette State
+  // Interactive Hero Photo Slide State
   const [activeHeroSlide, setActiveHeroSlide] = useState<number>(0);
 
   // Gallery Filter & Lightbox State
@@ -192,34 +177,39 @@ export default function App() {
 
   const heroShowcases = [
     {
-      photo: GALLERY_PHOTOS[1], // Premium Twin Room
-      swatch: ROOM_PALETTE_SWATCHES[2], // Mulberry Silk #521F2C
-      captionEn: 'Premium Twin Residence · Mulberry Silk & Warm Teak',
-      captionBn: 'প্রিমিয়াম টুইন রেসিডেন্স · মালবেরি সিল্ক ও সেগুন কাঠের আবহ',
+      photo: GALLERY_PHOTOS[0], // Premium Twin Room
+      labelEn: 'Premium Twin',
+      labelBn: 'প্রিমিয়াম টুইন',
+      rateEn: '৳4,500 / Night · Breakfast Included',
+      rateBn: '৳৪,৫০০ / রাত · নাস্তাসহ',
     },
     {
-      photo: GALLERY_PHOTOS[3], // Deluxe Twin Room
-      swatch: ROOM_PALETTE_SWATCHES[1], // Aged Mahogany #382226
-      captionEn: 'Deluxe Twin Sanctuary · Handcrafted Mahogany & Linen',
-      captionBn: 'ডিলাক্স টুইন স্যুট · মেহগনি কাঠ ও শুভ্র লিনেন',
+      photo: GALLERY_PHOTOS[1], // Deluxe Twin Room
+      labelEn: 'Deluxe Twin',
+      labelBn: 'ডিলাক্স টুইন',
+      rateEn: '৳3,400 / Night · Breakfast Included',
+      rateBn: '৳৩,৪০০ / রাত · নাস্তাসহ',
     },
     {
-      photo: GALLERY_PHOTOS[2], // Reception
-      swatch: ROOM_PALETTE_SWATCHES[4], // Burnished Teak Bronze #A36E4A
-      captionEn: '24-Hour Front Desk · Burnished Teak & Golden Sconce',
-      captionBn: '২৪ ঘণ্টা রিসেপশন · বার্নিশড সেগুন ও সোনালি আলো',
+      photo: GALLERY_PHOTOS[2], // Triple Family Suite
+      labelEn: 'Family Suite',
+      labelBn: 'ফ্যামিলি স্যুট',
+      rateEn: '৳3,850 / Night · Up to 3 Guests',
+      rateBn: '৳৩,৮৫০ / রাত · ৩ জন অতিথি',
     },
     {
-      photo: GALLERY_PHOTOS[4], // Lobby
-      swatch: ROOM_PALETTE_SWATCHES[0], // Evening Aubergine #2E1F29
-      captionEn: 'Guest Salon & Lounge · Deep Aubergine Velvet',
-      captionBn: 'গেস্ট লাউঞ্জ · গাঢ় বেগুনি ভেলভেট সোফা',
+      photo: GALLERY_PHOTOS[3], // Reception
+      labelEn: '24/7 Reception',
+      labelBn: '২৪/৭ রিসেপশন',
+      rateEn: 'Instant WhatsApp & Phone Booking',
+      rateBn: 'তাৎক্ষণিক বুকিং ও অভ্যর্থনা',
     },
     {
-      photo: GALLERY_PHOTOS[0], // Exterior
-      swatch: ROOM_PALETTE_SWATCHES[3], // Varendra Terracotta #6A302B
-      captionEn: 'Batar More Facade · At the Heart of Shaheb Bazar',
-      captionBn: 'বাটার মোড় ভবন · সাহেব বাজারের প্রাণকেন্দ্রে',
+      photo: GALLERY_PHOTOS[5], // Exterior
+      labelEn: 'Hotel Exterior',
+      labelBn: 'হোটেল ভবন',
+      rateEn: 'Batar More, Shaheb Bazar, Rajshahi',
+      rateBn: 'বাটার মোড়, সাহেব বাজার, রাজশাহী',
     },
   ];
 
@@ -229,17 +219,17 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#1B1218] text-[#F7F2EE] selection:bg-[#A36E4A]/30">
-      {/* Subtle Ambient Room-Toned Lighting */}
+      {/* Subtle Ambient Warm Hospitality Lighting */}
       <div
-        className="pointer-events-none fixed inset-0 z-0 opacity-45 transition-colors duration-700"
+        className="pointer-events-none fixed inset-0 z-0 opacity-40"
         style={{
-          background: `radial-gradient(circle at 18% 12%, ${currentHero.swatch.hex}44 0%, transparent 48%), radial-gradient(circle at 82% 78%, #521F2C38 0%, transparent 52%)`,
+          background:
+            'radial-gradient(circle at 18% 12%, rgba(82, 31, 44, 0.35) 0%, transparent 48%), radial-gradient(circle at 82% 78%, rgba(163, 110, 74, 0.16) 0%, transparent 52%)',
         }}
       />
 
       {/* ===================================================================
           TOP BAR CONTRACT (Strict 3-Zone Single-Row Architecture)
-          Zone 1: Single text wordmark | Zone 2: 5 Nav links | Zone 3: 1 Primary CTA
          =================================================================== */}
       <header className="sticky top-0 z-40 border-b border-[#A36E4A]/20 bg-[#1B1218]/90 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-8 px-6 py-4">
@@ -257,13 +247,13 @@ export default function App() {
               href="#suites"
               className="hover:text-[#F7F2EE] hover:underline underline-offset-8 decoration-[#C89572] transition-colors whitespace-nowrap shrink-0"
             >
-              {isBn ? 'স্যুটসমূহ' : 'Suites'}
+              {isBn ? 'রুম ও স্যুট' : 'Rooms & Suites'}
             </a>
             <a
               href="#experience"
               className="hover:text-[#F7F2EE] hover:underline underline-offset-8 decoration-[#C89572] transition-colors whitespace-nowrap shrink-0"
             >
-              {isBn ? 'সুবিধাসমূহ' : 'Experience'}
+              {isBn ? 'সুবিধাসমূহ' : 'Amenities'}
             </a>
             <a
               href="#gallery"
@@ -275,13 +265,13 @@ export default function App() {
               href="#location"
               className="hover:text-[#F7F2EE] hover:underline underline-offset-8 decoration-[#C89572] transition-colors whitespace-nowrap shrink-0"
             >
-              {isBn ? 'অবস্থান' : 'Location'}
+              {isBn ? 'লোকেশন' : 'Location'}
             </a>
             <a
               href="#concierge"
               className="hover:text-[#F7F2EE] hover:underline underline-offset-8 decoration-[#C89572] transition-colors whitespace-nowrap shrink-0"
             >
-              {isBn ? 'রিজার্ভেশন' : 'Concierge'}
+              {isBn ? 'রিজার্ভেশন' : 'Reservations'}
             </a>
           </nav>
 
@@ -291,17 +281,16 @@ export default function App() {
               href="#concierge"
               className="rounded-lg bg-[#A36E4A] px-4 py-2 text-xs font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors whitespace-nowrap shrink-0"
             >
-              {isBn ? 'স্যুট বুকিং করুন' : 'Reserve a Suite'}
+              {isBn ? 'রুম বুকিং করুন' : 'Book a Room'}
             </a>
           </div>
         </div>
       </header>
 
       {/* ===================================================================
-          HERO & BILINGUAL UTILITY BAR
+          SUB-HEADER GUEST UTILITY BAR
          =================================================================== */}
       <main className="relative z-10">
-        {/* Sub-Header Utility Strip (Location context + Interactive Language/Currency Controls) */}
         <div className="border-b border-[#A36E4A]/15 bg-[#24181F]/70">
           <div className="mx-auto flex flex-wrap items-center justify-between gap-4 px-6 py-2.5 max-w-[1280px] text-xs text-[#C5B5AC]">
             <div className="flex flex-wrap items-center gap-2">
@@ -321,7 +310,7 @@ export default function App() {
                 ·
               </span>
               <span className="hidden sm:inline">
-                {isBn ? '২৪/৭ ফ্রন্ট ডেস্ক অভ্যর্থনা' : '24/7 Front Desk Concierge'}
+                {isBn ? '২৪/৭ ফ্রন্ট ডেস্ক ও রুম সার্ভিস' : '24/7 Front Desk & Room Service'}
               </span>
             </div>
 
@@ -389,17 +378,17 @@ export default function App() {
         </div>
 
         {/* ===================================================================
-            HERO SECTION (2-Column Asymmetric Split + Full-Width Booking Bar)
+            HERO SECTION (2-Column Split + Full-Width Availability Configurator)
            =================================================================== */}
         <section className="mx-auto max-w-[1280px] px-6 pt-10 pb-14 lg:pt-14 lg:pb-20">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-stretch">
-            {/* Left Column: Editorial Narrative & Room-Derived Palette Selector */}
+            {/* Left Column: Hotel Value Proposition & Guest Highlights */}
             <div className="flex flex-col justify-between lg:col-span-6">
               <div>
                 <p className="text-xs font-medium text-[#C89572] tracking-wide">
                   {isBn
-                    ? 'রাজশাহী শহরের কেন্দ্রে অবস্থিত আভিজাত্যের ঠিকানা'
-                    : 'Boutique Sanctuary in Central Rajshahi'}
+                    ? 'হোটেল মুক্তা ইন্টারন্যাশনাল · বাটার মোড়, সাহেব বাজার, রাজশাহী'
+                    : 'Hotel Mukta International · Batar More, Shaheb Bazar, Rajshahi'}
                 </p>
 
                 <h1
@@ -407,14 +396,14 @@ export default function App() {
                   style={{ fontSize: 'clamp(2.35rem, 4.2vw, 3.75rem)', lineHeight: 1.08 }}
                 >
                   {isBn
-                    ? 'উষ্ণ মেহগনি, রাজশাহী সিল্কের আভা ও নির্জন বিশ্রামের মেলবন্ধন'
-                    : 'Warm Mahogany, Mulberry Silk Tones & Quiet Refinement'}
+                    ? 'রাজশাহী শহরের প্রাণকেন্দ্রে আধুনিক আরাম ও আন্তরিক আতিথেয়তা'
+                    : 'Refined Comfort & Premier Hospitality in the Heart of Rajshahi'}
                 </h1>
 
                 <p className="mt-5 max-w-[62ch] text-base leading-relaxed text-[#C5B5AC]">
                   {isBn
-                    ? 'পদ্মা নদীর পাড় ও ঐতিহ্যবাহী সাহেব বাজারের বাটার মোড়ে অবস্থিত হোটেল মুক্তা ইন্টারন্যাশনাল। আমাদের প্রতিটি শীতাতপ নিয়ন্ত্রিত স্যুট সাজানো হয়েছে উষ্ণ কাঠের আসবাব, শুভ্র লিনেন এবং সার্বক্ষণিক আন্তরিক আতিথেয়তায়।'
-                    : 'Positioned at Batar More in Shaheb Bazar—five minutes from the Padma River promenade. Our air-conditioned suites pair handcrafted mahogany woodwork, mulberry-toned drapery, and crisp ivory linens with 24-hour front desk hospitality.'}
+                    ? 'পদ্মা নদীর পাড়, সিল্ক শোরুম ও রেলওয়ে স্টেশনের সন্নিকটে সাহেব বাজারের বাটার মোড়ে অবস্থিত। ব্যবসায়িক সফর কিংবা পারিবারিক ভ্রমণের জন্য আমাদের শীতাতপ নিয়ন্ত্রিত রুম, ফ্রি নাস্তা, হাই-স্পিড ওয়াই-ফাই ও ২৪ ঘণ্টা ফ্রন্ট ডেস্ক সেবা আপনার অপেক্ষায়।'
+                    : 'Ideally situated at Batar More in Shaheb Bazar, just minutes from the Padma River promenade and Rajshahi Railway Station. Enjoy quiet air-conditioned rooms, complimentary morning breakfast, high-speed fiber Wi-Fi, and 24-hour front desk service.'}
                 </p>
 
                 {/* Primary Hero CTA & Secondary Action */}
@@ -426,7 +415,7 @@ export default function App() {
                     className="inline-flex items-center gap-2.5 rounded-lg bg-[#A36E4A] px-6 py-3.5 text-sm font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors whitespace-nowrap shrink-0"
                   >
                     <span>
-                      {isBn ? 'হোয়াটসঅ্যাপে তাৎক্ষণিক বুকিং' : 'Reserve via WhatsApp'}
+                      {isBn ? 'হোয়াটসঅ্যাপে রুম বুকিং করুন' : 'Book via WhatsApp'}
                     </span>
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
@@ -435,50 +424,40 @@ export default function App() {
                     href="#suites"
                     className="inline-flex items-center gap-2 rounded-lg border border-[#A36E4A]/35 bg-[#281A21]/70 px-5 py-3.5 text-sm font-medium text-[#F7F2EE] hover:border-[#C89572] hover:bg-[#382226] transition-colors whitespace-nowrap shrink-0"
                   >
-                    <span>{isBn ? 'রুম ও ভাড়া দেখুন' : 'Explore Suites & Rates'}</span>
+                    <span>{isBn ? 'রুম ও ভাড়া দেখুন' : 'View Rooms & Rates'}</span>
                   </a>
                 </div>
               </div>
 
-              {/* Interactive Interior Palette Strip (Extracted Directly from Hotel Rooms & Photos) */}
+              {/* Customer-Focused Hotel Highlights & Space Selector */}
               <div className="mt-10 pt-8 border-t border-[#A36E4A]/20">
-                <div className="flex items-center justify-between gap-4">
-                  <span className="text-xs font-medium text-[#C5B5AC]">
+                <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-[#C5B5AC]">
+                  <span>
                     {isBn
-                      ? 'হোটেলের রুম ও আলোকচিত্র থেকে নেওয়া রঙের আবহ (পরিবর্তন করতে ক্লিক করুন)'
-                      : 'Interior Palette Extracted from Our Suites & Spaces (Select to preview)'}
+                      ? 'চেক-ইন: দুপুর ১২:০০ · চেক-আউট: সকাল ১১:০০'
+                      : 'Check-In: 12:00 PM · Check-Out: 11:00 AM'}
                   </span>
-                  <span className="font-mono-tabular text-xs text-[#C89572]">
-                    {currentHero.swatch.hex}
+                  <span className="text-[#D9A985] font-medium">
+                    {isBn ? 'সকালের নাস্তা ও পার্কিং ফ্রি' : 'Complimentary Breakfast & Parking'}
                   </span>
                 </div>
 
-                <div className="mt-3.5 grid grid-cols-5 gap-2.5">
+                {/* Quick Room & Facility Preview Switcher */}
+                <div className="mt-4 grid grid-cols-2 sm:grid-cols-5 gap-2">
                   {heroShowcases.map((item, idx) => {
                     const isActive = idx === activeHeroSlide;
                     return (
                       <button
-                        key={item.swatch.hex}
+                        key={item.photo.id}
                         type="button"
                         onClick={() => setActiveHeroSlide(idx)}
-                        className={`group flex flex-col items-start rounded-lg p-2.5 text-left transition-all border ${
+                        className={`rounded-lg px-3 py-2 text-left text-xs font-medium transition-all border whitespace-nowrap truncate ${
                           isActive
-                            ? 'border-[#C89572] bg-[#382226]/90'
-                            : 'border-[#A36E4A]/15 bg-[#24171E]/60 hover:border-[#A36E4A]/40'
+                            ? 'border-[#C89572] bg-[#521F2C]/85 text-[#F7F2EE]'
+                            : 'border-[#A36E4A]/20 bg-[#24171E]/70 text-[#C5B5AC] hover:border-[#A36E4A]/45 hover:text-[#F7F2EE]'
                         }`}
                       >
-                        <div className="flex w-full items-center justify-between gap-1.5">
-                          <span
-                            className="h-5 w-5 rounded-full border border-white/20 shrink-0"
-                            style={{ backgroundColor: item.swatch.hex }}
-                          />
-                          <span className="font-mono-tabular text-[11px] text-[#8E7D76] group-hover:text-[#C5B5AC]">
-                            0{idx + 1}
-                          </span>
-                        </div>
-                        <span className="mt-2 line-clamp-1 text-xs font-medium text-[#F7F2EE]">
-                          {isBn ? item.swatch.nameBn : item.swatch.nameEn}
-                        </span>
+                        {isBn ? item.labelBn : item.labelEn}
                       </button>
                     );
                   })}
@@ -486,13 +465,12 @@ export default function App() {
               </div>
             </div>
 
-            {/* Right Column: Real Hotel Photography Showcase with Measured Contrast Scrim */}
+            {/* Right Column: Real Hotel Photography Showcase */}
             <div className="lg:col-span-6 flex flex-col">
               <div className="relative flex-1 min-h-[380px] lg:min-h-[520px] rounded-xl overflow-hidden border border-[#A36E4A]/30 bg-[#2E1F29]">
                 <ResilientImage
                   src={currentHero.photo.url}
                   alt={isBn ? currentHero.photo.titleBn : currentHero.photo.titleEn}
-                  accentColor={currentHero.swatch.hex}
                   className="h-full w-full lg:h-full"
                 />
 
@@ -502,10 +480,8 @@ export default function App() {
                 {/* Bottom Caption & Slide Controls */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col justify-between gap-4 p-6 sm:flex-row sm:items-end">
                   <div>
-                    <div className="flex items-center gap-2 text-xs text-[#D9A985]">
-                      <span>
-                        {isBn ? currentHero.swatch.nameBn : currentHero.swatch.nameEn}
-                      </span>
+                    <div className="flex items-center gap-2 text-xs text-[#D9A985] tabular-nums">
+                      <span>{isBn ? currentHero.rateBn : currentHero.rateEn}</span>
                       <span aria-hidden="true">·</span>
                       <span>
                         {isBn
@@ -526,7 +502,7 @@ export default function App() {
                           (prev) => (prev - 1 + heroShowcases.length) % heroShowcases.length
                         )
                       }
-                      aria-label="Previous interior photo"
+                      aria-label="Previous hotel photo"
                       className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#A36E4A]/35 bg-[#1B1218]/80 text-[#F7F2EE] hover:border-[#C89572] hover:bg-[#382226] transition-colors"
                     >
                       <ChevronLeft className="h-4 w-4" />
@@ -536,7 +512,7 @@ export default function App() {
                       onClick={() =>
                         setActiveHeroSlide((prev) => (prev + 1) % heroShowcases.length)
                       }
-                      aria-label="Next interior photo"
+                      aria-label="Next hotel photo"
                       className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#A36E4A]/35 bg-[#1B1218]/80 text-[#F7F2EE] hover:border-[#C89572] hover:bg-[#382226] transition-colors"
                     >
                       <ChevronRight className="h-4 w-4" />
@@ -555,8 +531,8 @@ export default function App() {
               <div className="flex items-center gap-2 text-sm font-semibold text-[#F7F2EE]">
                 <span>
                   {isBn
-                    ? 'তাৎক্ষণিক রুম প্রাপ্যতা ও ভাড়া ক্যালকুলেটর'
-                    : 'Direct Stay Configurator & Rate Estimator'}
+                    ? 'রুম প্রাপ্যতা যাচাই ও তাৎক্ষণিক বুকিং'
+                    : 'Check Room Availability & Direct Rates'}
                 </span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#C5B5AC]">
@@ -573,13 +549,13 @@ export default function App() {
             </div>
 
             <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-12 lg:items-end">
-              {/* Suite Selector */}
+              {/* Room Selector */}
               <div className="lg:col-span-3">
                 <label
                   htmlFor="bar-suite-select"
                   className="block text-xs font-medium text-[#C5B5AC] mb-1.5"
                 >
-                  {isBn ? 'পছন্দের স্যুট' : 'Suite Category'}
+                  {isBn ? 'রুমের ধরন' : 'Room Category'}
                 </label>
                 <select
                   id="bar-suite-select"
@@ -654,7 +630,7 @@ export default function App() {
                   <option value="3 Guests (Family)">
                     {isBn ? '৩ জন অতিথি (ফ্যামিলি)' : '3 Guests (Family)'}
                   </option>
-                  <option value="4+ Guests (Multiple Suites)">
+                  <option value="4+ Guests (Multiple Rooms)">
                     {isBn ? '৪+ জন (একাধিক রুম)' : '4+ Guests (Group)'}
                   </option>
                 </select>
@@ -664,7 +640,12 @@ export default function App() {
               <div className="lg:col-span-3 flex items-center justify-between lg:justify-end gap-3 pt-2 lg:pt-0">
                 <div className="text-left lg:text-right">
                   <span className="block text-[11px] text-[#C5B5AC] tabular-nums">
-                    {nightsCount} {isBn ? 'রাতের আনুমানিক ভাড়া' : nightsCount === 1 ? 'Night Total' : 'Nights Total'}
+                    {nightsCount}{' '}
+                    {isBn
+                      ? 'রাতের আনুমানিক ভাড়া'
+                      : nightsCount === 1
+                      ? 'Night Total'
+                      : 'Nights Total'}
                   </span>
                   <span className="font-mono-tabular text-lg font-semibold text-[#D9A985]">
                     {currency === 'BDT'
@@ -678,7 +659,7 @@ export default function App() {
                   onClick={() => setShowSlipModal(true)}
                   className="rounded-lg bg-[#A36E4A] px-4 py-2.5 text-xs font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors whitespace-nowrap shrink-0"
                 >
-                  {isBn ? 'বুকিং স্লিপ দেখুন' : 'Check Availability'}
+                  {isBn ? 'বুকিং করুন' : 'Book Now'}
                 </button>
               </div>
             </div>
@@ -686,8 +667,7 @@ export default function App() {
         </section>
 
         {/* ===================================================================
-            SUITES & ACCOMMODATIONS SECTION (#suites)
-            Zero-Pill Metadata Discipline + Real Suite Photos + Room Inspector
+            ROOMS & SUITES SECTION (#suites)
            =================================================================== */}
         <section
           id="suites"
@@ -697,23 +677,23 @@ export default function App() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <p className="text-xs font-medium text-[#C89572]">
-                  {isBn ? '০১ · আমাদের আবাসন ব্যবস্থা' : '01 · Accommodations & Suites'}
+                  {isBn ? '০১ · রুম ও স্যুটসমূহ' : '01 · Accommodations & Rates'}
                 </p>
                 <h2 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-[#F7F2EE] text-balance">
                   {isBn
-                    ? 'শান্ত ও সুসজ্জিত শীতাতপ নিয়ন্ত্রিত স্যুটসমূহ'
-                    : 'Climate-Controlled Suites Dressed in Warm Timber'}
+                    ? 'আপনার প্রয়োজন অনুযায়ী শীতাতপ নিয়ন্ত্রিত রুম বেছে নিন'
+                    : 'Spacious Air-Conditioned Rooms & Family Suites'}
                 </h2>
               </div>
 
               <p className="max-w-md text-sm text-[#C5B5AC]">
                 {isBn
-                  ? 'প্রতিটি রুমে রয়েছে স্প্লিট এসি, দ্রুতগতির ফাইবার ওয়াই-ফাই, ফ্ল্যাট-প্যানেল টিভি, রেফ্রিজারেটর এবং ২৪ ঘণ্টা রুম সার্ভিস।'
-                  : 'All rates include complimentary morning breakfast, high-speed fiber Wi-Fi, split air conditioning, and flexible cancellation.'}
+                  ? 'প্রতিটি রুমের সাথে সকালের নাস্তা, হাই-স্পিড ফাইবার ওয়াই-ফাই, ফ্ল্যাট-প্যানেল টিভি, রেফ্রিজারেটর এবং ২৪ ঘণ্টা রুম সার্ভিস অন্তর্ভুক্ত।'
+                  : 'All room rates include complimentary morning breakfast, high-speed fiber Wi-Fi, split air conditioning, and flexible cancellation.'}
               </p>
             </div>
 
-            {/* 3 Architectural Suite Cards */}
+            {/* 3 Suite Cards */}
             <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-3">
               {ROOMS_DATA.map((room) => {
                 const isSelected = room.id === selectedRoomId;
@@ -738,18 +718,12 @@ export default function App() {
                         <ResilientImage
                           src={room.image}
                           alt={isBn ? room.nameBn : room.nameEn}
-                          accentColor={room.swatchHex}
                           className="h-full w-full"
                         />
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2B1C23] via-transparent to-black/25" />
+                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2B1C23] via-transparent to-black/30" />
 
-                        {/* Quiet Room Palette Indicator */}
-                        <div className="absolute top-4 left-4 flex items-center gap-2 text-xs text-[#F7F2EE] drop-shadow">
-                          <span
-                            className="h-3 w-3 rounded-full border border-white/40"
-                            style={{ backgroundColor: room.swatchHex }}
-                          />
-                          <span>{isBn ? room.floorToneBn : room.floorToneEn}</span>
+                        <div className="absolute top-4 left-4 text-xs font-medium text-[#F7F2EE] drop-shadow">
+                          {isBn ? room.highlightBn : room.highlightEn}
                         </div>
 
                         <button
@@ -762,13 +736,12 @@ export default function App() {
                           className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-md bg-[#1B1218]/85 px-3 py-1.5 text-xs font-medium text-[#F7F2EE] border border-[#A36E4A]/30 hover:border-[#C89572] transition-colors whitespace-nowrap shrink-0"
                         >
                           <Maximize2 className="h-3.5 w-3.5 text-[#C89572]" />
-                          <span>{isBn ? 'বিস্তারিত দেখুন' : 'Inspect Suite'}</span>
+                          <span>{isBn ? 'রুমের বিস্তারিত' : 'Room Details'}</span>
                         </button>
                       </div>
 
                       {/* Card Body: Unboxed Metadata & Editorial Hierarchy */}
                       <div className="p-6">
-                        {/* Unboxed Metadata Line with · separators */}
                         <div className="flex flex-wrap items-center gap-1.5 text-xs text-[#C5B5AC] tabular-nums">
                           <span>{room.sizeSqFt} sq.ft</span>
                           <span aria-hidden="true">·</span>
@@ -802,7 +775,7 @@ export default function App() {
                     <div className="px-6 pb-6 pt-3 flex items-center justify-between gap-4 border-t border-[#A36E4A]/15">
                       <div>
                         <span className="block text-[11px] text-[#8E7D76]">
-                          {isBn ? 'প্রতি রাতের ভাড়া (নাস্তাসহ)' : 'Nightly Rate · Incl. Breakfast'}
+                          {isBn ? 'প্রতি রাতের ভাড়া (নাস্তাসহ)' : 'Per Night · Incl. Breakfast'}
                         </span>
                         <div className="flex items-baseline gap-2">
                           <span className="font-mono-tabular text-xl font-semibold text-[#F7F2EE]">
@@ -825,7 +798,7 @@ export default function App() {
                           }}
                           className="rounded-lg bg-[#A36E4A] px-4 py-2 text-xs font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors whitespace-nowrap shrink-0"
                         >
-                          {isBn ? 'বুক করুন' : 'Reserve Suite'}
+                          {isBn ? 'বুক করুন' : 'Reserve Room'}
                         </button>
                       </div>
                     </div>
@@ -837,29 +810,29 @@ export default function App() {
         </section>
 
         {/* ===================================================================
-            EXPERIENCE, AMENITIES & BENTO ARCHITECTURE (#experience)
+            HOTEL AMENITIES & GUEST SERVICES (#experience)
            =================================================================== */}
         <section id="experience" className="py-20 bg-[#1B1218]">
           <div className="mx-auto max-w-[1280px] px-6">
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-end">
               <div className="lg:col-span-7">
                 <p className="text-xs font-medium text-[#C89572]">
-                  {isBn ? '০২ · আতিথেয়তা ও সুবিধাসমূহ' : '02 · Property Capabilities & Comforts'}
+                  {isBn ? '০২ · হোটেল সুবিধাসমূহ ও সেবা' : '02 · Guest Amenities & Services'}
                 </p>
                 <h2 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-[#F7F2EE] text-balance">
                   {isBn
-                    ? 'ব্যবসায়িক সফর ও পারিবারিক বিশ্রামের জন্য নিখুঁত আয়োজন'
-                    : 'Engineered for Effortless Business & Family Stays'}
+                    ? 'ব্যবসায়িক সফর ও পারিবারিক বিশ্রামের জন্য পরিপূর্ণ সেবা'
+                    : 'Every Essential for a Restful & Productive Stay'}
                 </h2>
               </div>
               <div className="lg:col-span-5 text-sm text-[#C5B5AC]">
                 {isBn
-                  ? 'রিসেপশন থেকে শুরু করে রুম ডাইনিং—প্রতিটি ক্ষেত্রে আমাদের প্রশিক্ষিত কর্মীরা ২৪ ঘণ্টা আপনার সেবায় নিয়োজিত।'
-                  : 'From uninterrupted high-speed fiber internet to private on-premise parking and 24-hour room service, every essential is included.'}
+                  ? 'রিসেপশন থেকে শুরু করে রুম ডাইনিং ও গাড়ি পার্কিং—আমাদের প্রশিক্ষিত কর্মীরা ২৪ ঘণ্টা আপনার সেবায় নিয়োজিত।'
+                  : 'From uninterrupted high-speed fiber internet to private on-premise parking and 24-hour room service, our team is at your service around the clock.'}
               </div>
             </div>
 
-            {/* Asymmetric Bento Grid: Real Reception & Lounge Showcase + Numbered Capabilities */}
+            {/* Asymmetric Bento Grid: Real Reception Showcase + 6 Numbered Amenities */}
             <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-12">
               {/* Marquee Visual Feature (Col Span 5) */}
               <div className="lg:col-span-5 flex flex-col justify-between rounded-xl border border-[#A36E4A]/25 bg-[#2A1B22] overflow-hidden">
@@ -867,15 +840,14 @@ export default function App() {
                   <ResilientImage
                     src="https://hotelplacer.com/content/images/hotels/back/911/book_hotel_mukta_int_reception_hotelplacer.com.jpg"
                     alt={isBn ? '২৪ ঘণ্টা ফ্রন্ট ডেস্ক' : '24-Hour Front Desk & Reception'}
-                    accentColor="#A36E4A"
                     className="h-full w-full"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#2A1B22] via-transparent to-transparent" />
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center gap-2 text-xs text-[#D9A985] tabular-nums">
-                    <span>CRS Property ID 911</span>
+                  <div className="flex flex-wrap items-center gap-2 text-xs text-[#D9A985] tabular-nums">
+                    <span>{isBn ? 'সরাসরি রিসেপশন বুকিং' : 'Direct Front Desk Booking'}</span>
                     <span aria-hidden="true">·</span>
                     <span>Check-in 12:00 PM</span>
                     <span aria-hidden="true">·</span>
@@ -884,14 +856,14 @@ export default function App() {
 
                   <h3 className="mt-2 font-display text-2xl font-semibold text-[#F7F2EE]">
                     {isBn
-                      ? 'উষ্ণ অভ্যর্থনা ও তাৎক্ষণিক হোয়াটসঅ্যাপ কনসিয়ার্জ'
-                      : 'Personal Concierge Desk & Direct WhatsApp Confirmation'}
+                      ? '২৪ ঘণ্টা অভ্যর্থনা ও তাৎক্ষণিক হোয়াটসঅ্যাপ রিজার্ভেশন'
+                      : '24-Hour Reception & Instant WhatsApp Confirmation'}
                   </h3>
 
                   <p className="mt-2 text-sm leading-relaxed text-[#C5B5AC]">
                     {isBn
-                      ? 'মধ্যস্বত্বভোগী বা থার্ড-পার্টি বুকিং সাইটের অতিরিক্ত চার্জ ছাড়াই সরাসরি আমাদের ফ্রন্ট ডেস্কে কথা বলে রুম নিশ্চিত করুন।'
-                      : 'Skip third-party booking fees. Connect directly with our Batar More reception desk to arrange early check-in, corporate group rates, or station transfers.'}
+                      ? 'অতিরিক্ত অনলাইন চার্জ ছাড়াই সরাসরি আমাদের ফ্রন্ট ডেস্কে যোগাযোগ করে রুম বুকিং, কর্পোরেট রেট বা স্টেশন ট্রান্সফার নিশ্চিত করুন।'
+                      : 'Reserve directly with our Batar More front desk with zero third-party commission fees. We gladly assist with early check-ins, corporate group bookings, and local travel.'}
                   </p>
 
                   <div className="mt-6 pt-4 border-t border-[#A36E4A]/20 grid grid-cols-3 gap-4 text-left">
@@ -900,7 +872,7 @@ export default function App() {
                         24/7
                       </span>
                       <span className="block text-xs text-[#C5B5AC]">
-                        {isBn ? 'ফ্রন্ট ডেস্ক' : 'Reception Desk'}
+                        {isBn ? 'ফ্রন্ট ডেস্ক' : 'Front Desk'}
                       </span>
                     </div>
                     <div>
@@ -908,7 +880,7 @@ export default function App() {
                         100%
                       </span>
                       <span className="block text-xs text-[#C5B5AC]">
-                        {isBn ? 'স্প্লিট এসি রুম' : 'Split AC Suites'}
+                        {isBn ? 'এসি রুম' : 'AC Rooms'}
                       </span>
                     </div>
                     <div>
@@ -954,7 +926,7 @@ export default function App() {
         </section>
 
         {/* ===================================================================
-            REAL PHOTOGRAPHY GALLERY & COLOR STORY (#gallery)
+            HOTEL PHOTO GALLERY (#gallery)
            =================================================================== */}
         <section
           id="gallery"
@@ -964,16 +936,16 @@ export default function App() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <p className="text-xs font-medium text-[#C89572]">
-                  {isBn ? '০৩ · হোটেলের বাস্তব আলোকচিত্র' : '03 · Verified Property Archive'}
+                  {isBn ? '০৩ · হোটেল ফটো গ্যালারি' : '03 · Property Photo Gallery'}
                 </p>
                 <h2 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-[#F7F2EE] text-balance">
                   {isBn
-                    ? 'আমাদের রুম, লবি ও ভবনের বাস্তব চিত্রশালা'
-                    : 'Inside Hotel Mukta International'}
+                    ? 'আমাদের রুম, লবি ও ভবনের বাস্তব ছবি'
+                    : 'Explore Our Rooms, Reception & Exterior'}
                 </h2>
               </div>
 
-              {/* Interactive Filter Controls (Functional Segmented Buttons) */}
+              {/* Interactive Filter Controls */}
               <div
                 className="flex flex-wrap items-center gap-1 rounded-lg bg-[#1B1218] p-1 border border-[#A36E4A]/25"
                 role="tablist"
@@ -981,10 +953,10 @@ export default function App() {
               >
                 {(
                   [
-                    { key: 'all', labelEn: 'All Spaces (7)', labelBn: 'সব ছবি (৭)' },
-                    { key: 'suites', labelEn: 'Suites (3)', labelBn: 'স্যুটসমূহ (৩)' },
-                    { key: 'lobby', labelEn: 'Lobby & Desk (2)', labelBn: 'লবি ও রিসেপশন (২)' },
-                    { key: 'exterior', labelEn: 'Exterior (2)', labelBn: 'ভবন ও অবস্থান (২)' },
+                    { key: 'all', labelEn: 'All Photos (7)', labelBn: 'সব ছবি (৭)' },
+                    { key: 'suites', labelEn: 'Rooms & Suites (3)', labelBn: 'রুমসমূহ (৩)' },
+                    { key: 'lobby', labelEn: 'Lobby & Reception (2)', labelBn: 'লবি ও রিসেপশন (২)' },
+                    { key: 'exterior', labelEn: 'Exterior & Area (2)', labelBn: 'ভবন ও এলাকা (২)' },
                   ] as const
                 ).map((tab) => (
                   <button
@@ -1015,18 +987,11 @@ export default function App() {
                     <ResilientImage
                       src={photo.url}
                       alt={isBn ? photo.titleBn : photo.titleEn}
-                      accentColor={photo.dominantColor}
                       className="h-full w-full group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#1B1218]/80 via-transparent to-transparent" />
-                    <div className="absolute bottom-3 left-3 flex items-center gap-2 text-xs text-[#F7F2EE]">
-                      <span
-                        className="h-3 w-3 rounded-full border border-white/40"
-                        style={{ backgroundColor: photo.dominantColor }}
-                      />
-                      <span>
-                        {isBn ? photo.paletteNameBn : photo.paletteNameEn}
-                      </span>
+                    <div className="absolute bottom-3 left-3 text-xs text-[#D9A985]">
+                      {isBn ? photo.subtitleBn : photo.subtitleEn}
                     </div>
                   </div>
 
@@ -1040,7 +1005,7 @@ export default function App() {
                       </p>
                     </div>
                     <span className="text-xs font-medium text-[#C89572] group-hover:translate-x-0.5 transition-transform whitespace-nowrap shrink-0">
-                      {isBn ? 'বড় করে দেখুন' : 'View'}
+                      {isBn ? 'বড় করে দেখুন' : 'Enlarge'}
                     </span>
                   </div>
                 </div>
@@ -1057,7 +1022,7 @@ export default function App() {
             <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
               <div>
                 <p className="text-xs font-medium text-[#C89572]">
-                  {isBn ? '০৪ · অবস্থান ও রাজশাহী গাইড' : '04 · Location & Rajshahi Transit'}
+                  {isBn ? '০৪ · হোটেলের অবস্থান ও আশেপাশের দর্শনীয় স্থান' : '04 · Location & City Landmarks'}
                 </p>
                 <h2 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-[#F7F2EE] text-balance">
                   {isBn
@@ -1074,7 +1039,7 @@ export default function App() {
               >
                 <Compass className="h-4 w-4 text-[#C89572]" />
                 <span>
-                  {isBn ? 'গুগল ম্যাপে দিকনির্দেশনা' : 'Open in Google Maps'}
+                  {isBn ? 'গুগল ম্যাপে দিকনির্দেশনা' : 'Get Directions on Google Maps'}
                 </span>
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
@@ -1117,7 +1082,7 @@ export default function App() {
                 })}
               </div>
 
-              {/* Embedded Google Map + Property Coordinates Card (Col Span 7) */}
+              {/* Embedded Google Map + Property Address Card (Col Span 7) */}
               <div className="lg:col-span-7 flex flex-col justify-between rounded-xl border border-[#A36E4A]/25 bg-[#261920] overflow-hidden">
                 <div className="h-[360px] lg:h-full min-h-[340px] w-full">
                   <iframe
@@ -1132,15 +1097,15 @@ export default function App() {
 
                 <div className="p-5 border-t border-[#A36E4A]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
-                    <p className="text-xs text-[#C89572] font-mono-tabular">
-                      GPS: 24.366963° N, 88.600326° E
+                    <p className="text-xs text-[#C89572]">
+                      {isBn ? 'হোটেলের ঠিকানা' : 'Hotel Address'}
                     </p>
                     <p className="mt-0.5 text-sm font-medium text-[#F7F2EE]">
                       {isBn ? HOTEL_CONTACT.addressBn : HOTEL_CONTACT.addressEn}
                     </p>
                   </div>
                   <div className="text-xs text-[#C5B5AC] shrink-0">
-                    {isBn ? 'নির্বাচিত গন্তব্য:' : 'Selected:'}{' '}
+                    {isBn ? 'নির্বাচিত স্থান:' : 'Selected:'}{' '}
                     <span className="text-[#D9A985] font-medium">
                       {isBn ? activeLandmark.nameBn : activeLandmark.nameEn} (
                       {activeLandmark.distanceKm})
@@ -1162,17 +1127,17 @@ export default function App() {
           <div className="mx-auto max-w-[1280px] px-6">
             <div className="max-w-2xl">
               <p className="text-xs font-medium text-[#C89572]">
-                {isBn ? '০৫ · সরাসরি বুকিং ও ফ্রন্ট ডেস্ক' : '05 · Direct Reservations & Concierge'}
+                {isBn ? '০৫ · সরাসরি রুম বুকিং ও যোগাযোগ' : '05 · Direct Reservations & Contact'}
               </p>
               <h2 className="mt-2 font-display text-3xl sm:text-4xl font-semibold text-[#F7F2EE] text-balance">
                 {isBn
                   ? 'হোয়াটসঅ্যাপ বা ফোনে সরাসরি আপনার রুম নিশ্চিত করুন'
-                  : 'Reserve Directly with Our Rajshahi Front Desk'}
+                  : 'Reserve Your Stay Directly with Our Front Desk'}
               </h2>
               <p className="mt-3 text-sm text-[#C5B5AC]">
                 {isBn
-                  ? 'নিচের ফর্মটি পূরণ করলে আপনার তথ্যসহ একটি প্রস্তুতকৃত বার্তা তৈরি হবে, যা এক ক্লিকেই আমাদের অফিসিয়াল হোয়াটসঅ্যাপে (+880 1711-302322) পাঠাতে পারবেন।'
-                  : 'Complete your stay details below. Our configurator prepares a structured reservation slip that connects directly to our front desk on WhatsApp (+880 1711-302322).'}
+                  ? 'নিচের ফর্মটি পূরণ করে এক ক্লিকেই আমাদের অফিসিয়াল হোয়াটসঅ্যাপে (+880 1711-302322) বুকিং অনুরোধ পাঠান অথবা সরাসরি ফোনে কথা বলুন।'
+                  : 'Fill in your stay details below to send a direct WhatsApp booking request to our front desk (+880 1711-302322), or call our 24/7 reception hotline.'}
               </p>
             </div>
 
@@ -1180,7 +1145,7 @@ export default function App() {
               {/* Left Column: Guest Reservation Builder Form (Col Span 7) */}
               <div className="lg:col-span-7 rounded-xl border border-[#A36E4A]/25 bg-[#2B1C23] p-6 sm:p-8">
                 <h3 className="font-display text-2xl font-semibold text-[#F7F2EE]">
-                  {isBn ? 'অতিথি ও রিজার্ভেশন তথ্য' : 'Guest Reservation Details'}
+                  {isBn ? 'রুম রিজার্ভেশন ফর্ম' : 'Room Reservation Request'}
                 </h3>
 
                 <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -1189,7 +1154,7 @@ export default function App() {
                       htmlFor="concierge-name"
                       className="block text-xs font-medium text-[#C5B5AC] mb-1.5"
                     >
-                      {isBn ? 'অতিথির নাম' : 'Full Name'}
+                      {isBn ? 'অতিথির নাম' : 'Guest Full Name'}
                     </label>
                     <input
                       id="concierge-name"
@@ -1223,7 +1188,7 @@ export default function App() {
                       htmlFor="concierge-suite"
                       className="block text-xs font-medium text-[#C5B5AC] mb-1.5"
                     >
-                      {isBn ? 'স্যুট নির্বাচন' : 'Selected Suite'}
+                      {isBn ? 'রুমের ধরন' : 'Room Category'}
                     </label>
                     <select
                       id="concierge-suite"
@@ -1334,8 +1299,8 @@ export default function App() {
                   >
                     <span>
                       {isBn
-                        ? 'হোয়াটসঅ্যাপে রিজার্ভেশন পাঠান'
-                        : 'Send Reservation via WhatsApp'}
+                        ? 'হোয়াটসঅ্যাপে বুকিং পাঠান'
+                        : 'Send Booking via WhatsApp'}
                     </span>
                     <ArrowUpRight className="h-4 w-4" />
                   </a>
@@ -1348,25 +1313,25 @@ export default function App() {
                     {copiedMessage ? (
                       <>
                         <Check className="h-4 w-4 text-[#C89572]" />
-                        <span>{isBn ? 'বার্তা কপি হয়েছে!' : 'Copied Reservation Slip'}</span>
+                        <span>{isBn ? 'বার্তা কপি হয়েছে!' : 'Copied Booking Details'}</span>
                       </>
                     ) : (
                       <>
                         <Copy className="h-4 w-4 text-[#C89572]" />
-                        <span>{isBn ? 'বুকিং টেক্সট কপি করুন' : 'Copy Reservation Text'}</span>
+                        <span>{isBn ? 'বুকিং টেক্সট কপি করুন' : 'Copy Booking Details'}</span>
                       </>
                     )}
                   </button>
                 </div>
               </div>
 
-              {/* Right Column: Live Reservation Slip Preview & Direct Channels (Col Span 5) */}
+              {/* Right Column: Live Reservation Summary & Direct Contact Channels (Col Span 5) */}
               <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                 {/* Live Slip Preview */}
                 <div className="rounded-xl border border-[#A36E4A]/25 bg-[#1B1218] p-6">
                   <div className="flex items-center justify-between border-b border-[#A36E4A]/15 pb-3">
                     <span className="text-xs font-medium text-[#C89572]">
-                      {isBn ? 'লাইভ হোয়াটসঅ্যাপ বার্তা প্রিভিউ' : 'Live Reservation Slip Preview'}
+                      {isBn ? 'আপনার বুকিং সারসংক্ষেপ' : 'Your Booking Summary'}
                     </span>
                     <span className="font-mono-tabular text-xs text-[#C5B5AC]">
                       {HOTEL_CONTACT.whatsappDisplay}
@@ -1384,7 +1349,7 @@ export default function App() {
                     className="rounded-xl border border-[#A36E4A]/20 bg-[#2B1C23] p-4 hover:border-[#C89572] transition-colors"
                   >
                     <span className="text-xs text-[#C5B5AC]">
-                      {isBn ? 'প্রধান রিজার্ভেশন হটলাইন' : 'Primary Hotline & WhatsApp'}
+                      {isBn ? 'প্রধান রিজার্ভেশন ও হোয়াটসঅ্যাপ' : 'Primary Booking & WhatsApp'}
                     </span>
                     <p className="mt-1 font-mono-tabular text-base font-semibold text-[#F7F2EE]">
                       {HOTEL_CONTACT.whatsappDisplay}
@@ -1396,7 +1361,7 @@ export default function App() {
                     className="rounded-xl border border-[#A36E4A]/20 bg-[#2B1C23] p-4 hover:border-[#C89572] transition-colors"
                   >
                     <span className="text-xs text-[#C5B5AC]">
-                      {isBn ? 'ফ্রন্ট ডেস্ক ২৪/৭ ফোন' : '24/7 Reception Desk'}
+                      {isBn ? 'ফ্রন্ট ডেস্ক ২৪/৭ হটলাইন' : '24/7 Front Desk Hotline'}
                     </span>
                     <p className="mt-1 font-mono-tabular text-base font-semibold text-[#F7F2EE]">
                       {HOTEL_CONTACT.frontDeskDisplay}
@@ -1405,11 +1370,11 @@ export default function App() {
                 </div>
 
                 <a
-                  href={`mailto:${HOTEL_CONTACT.email}?subject=Suite%20Reservation%20Inquiry`}
+                  href={`mailto:${HOTEL_CONTACT.email}?subject=Room%20Reservation%20Inquiry`}
                   className="rounded-xl border border-[#A36E4A]/20 bg-[#2B1C23] p-4 hover:border-[#C89572] transition-colors block"
                 >
                   <span className="text-xs text-[#C5B5AC]">
-                    {isBn ? 'কর্পোরেট ও গ্রুপ বুকিং ইমেইল' : 'Corporate & Delegation Inquiries'}
+                    {isBn ? 'কর্পোরেট ও গ্রুপ বুকিং ইমেইল' : 'Corporate & Group Bookings'}
                   </span>
                   <p className="mt-1 font-mono-tabular text-sm font-medium text-[#D9A985]">
                     {HOTEL_CONTACT.email}
@@ -1439,10 +1404,10 @@ export default function App() {
 
           <div className="flex flex-wrap items-center gap-6">
             <a href="#suites" className="hover:text-[#F7F2EE] transition-colors">
-              {isBn ? 'স্যুটসমূহ' : 'Suites'}
+              {isBn ? 'রুম ও স্যুট' : 'Rooms & Suites'}
             </a>
             <a href="#experience" className="hover:text-[#F7F2EE] transition-colors">
-              {isBn ? 'সুবিধাসমূহ' : 'Experience'}
+              {isBn ? 'সুবিধাসমূহ' : 'Amenities'}
             </a>
             <a href="#gallery" className="hover:text-[#F7F2EE] transition-colors">
               {isBn ? 'গ্যালারি' : 'Gallery'}
@@ -1463,7 +1428,7 @@ export default function App() {
       </footer>
 
       {/* ===================================================================
-          MODAL 1: SUITE INSPECTOR MODAL (Multi-Photo + Full Specs)
+          MODAL 1: ROOM DETAILS MODAL (Multi-Photo + Full Amenities)
          =================================================================== */}
       {inspectedRoom && (
         <div
@@ -1479,7 +1444,7 @@ export default function App() {
                 <p className="text-xs text-[#C89572] tabular-nums">
                   {inspectedRoom.sizeSqFt} sq.ft ·{' '}
                   {isBn ? inspectedRoom.bedConfigBn : inspectedRoom.bedConfigEn} ·{' '}
-                  {isBn ? inspectedRoom.floorToneBn : inspectedRoom.floorToneEn}
+                  {isBn ? inspectedRoom.viewBn : inspectedRoom.viewEn}
                 </p>
                 <h3 className="mt-1 font-display text-2xl sm:text-3xl font-semibold">
                   {isBn ? inspectedRoom.nameBn : inspectedRoom.nameEn}
@@ -1488,7 +1453,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setInspectedRoom(null)}
-                aria-label="Close suite inspector"
+                aria-label="Close room details"
                 className="rounded-lg border border-[#A36E4A]/30 bg-[#1B1218] p-2 text-[#C5B5AC] hover:text-[#F7F2EE]"
               >
                 <X className="h-5 w-5" />
@@ -1503,7 +1468,6 @@ export default function App() {
                   inspectedRoom.image
                 }
                 alt={isBn ? inspectedRoom.nameBn : inspectedRoom.nameEn}
-                accentColor={inspectedRoom.swatchHex}
                 className="h-full w-full"
               />
             </div>
@@ -1524,7 +1488,6 @@ export default function App() {
                   <ResilientImage
                     src={imgUrl}
                     alt={`View ${idx + 1}`}
-                    accentColor={inspectedRoom.swatchHex}
                     className="h-full w-full"
                   />
                 </button>
@@ -1538,7 +1501,7 @@ export default function App() {
             {/* Full Amenities List */}
             <div className="mt-6 pt-5 border-t border-[#A36E4A]/20">
               <h4 className="text-xs font-semibold text-[#C89572]">
-                {isBn ? 'রুমের অন্তর্ভুক্ত সুবিধাসমূহ' : 'Included Suite Amenities'}
+                {isBn ? 'রুমের অন্তর্ভুক্ত সুবিধাসমূহ' : 'Included Room Amenities'}
               </h4>
               <ul className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-sm text-[#F7F2EE]">
                 {(isBn ? inspectedRoom.amenitiesBn : inspectedRoom.amenitiesEn).map(
@@ -1581,8 +1544,8 @@ export default function App() {
                   className="rounded-lg bg-[#A36E4A] px-5 py-2.5 text-xs font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors whitespace-nowrap shrink-0"
                 >
                   {isBn
-                    ? 'হোয়াটসঅ্যাপে এই স্যুট বুক করুন'
-                    : 'Reserve This Suite via WhatsApp'}
+                    ? 'হোয়াটসঅ্যাপে এই রুম বুক করুন'
+                    : 'Book This Room via WhatsApp'}
                 </button>
               </div>
             </div>
@@ -1591,7 +1554,7 @@ export default function App() {
       )}
 
       {/* ===================================================================
-          MODAL 2: RESERVATION SLIP PREVIEW & WHATSAPP LAUNCHER
+          MODAL 2: RESERVATION SUMMARY & WHATSAPP LAUNCHER
          =================================================================== */}
       {showSlipModal && (
         <div
@@ -1605,7 +1568,7 @@ export default function App() {
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-medium text-[#C89572]">
-                  {isBn ? 'সরাসরি ফ্রন্ট ডেস্ক কনফার্মেশন' : 'Direct Front Desk Reservation Slip'}
+                  {isBn ? 'সরাসরি ফ্রন্ট ডেস্ক বুকিং' : 'Direct Front Desk Reservation'}
                 </p>
                 <h3 className="mt-1 font-display text-2xl font-semibold">
                   {isBn ? selectedRoom.nameBn : selectedRoom.nameEn}
@@ -1614,7 +1577,7 @@ export default function App() {
               <button
                 type="button"
                 onClick={() => setShowSlipModal(false)}
-                aria-label="Close reservation slip"
+                aria-label="Close booking modal"
                 className="rounded-lg border border-[#A36E4A]/30 bg-[#1B1218] p-2 text-[#C5B5AC] hover:text-[#F7F2EE]"
               >
                 <X className="h-5 w-5" />
@@ -1653,7 +1616,7 @@ export default function App() {
                 className="inline-flex items-center gap-2 rounded-lg bg-[#A36E4A] px-5 py-2.5 text-xs font-semibold text-[#1B1218] hover:bg-[#C89572] transition-colors"
               >
                 <span>
-                  {isBn ? 'হোয়াটসঅ্যাপ ওপেন করুন' : 'Continue to WhatsApp'}
+                  {isBn ? 'হোয়াটসঅ্যাপে বুকিং সম্পন্ন করুন' : 'Continue to WhatsApp'}
                 </span>
                 <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -1683,8 +1646,8 @@ export default function App() {
                 </span>
                 <span className="ml-3 text-xs text-[#C5B5AC]">
                   {isBn
-                    ? filteredGallery[lightboxIndex].paletteNameBn
-                    : filteredGallery[lightboxIndex].paletteNameEn}
+                    ? filteredGallery[lightboxIndex].locationBn
+                    : filteredGallery[lightboxIndex].locationEn}
                 </span>
               </div>
               <button
@@ -1705,7 +1668,6 @@ export default function App() {
                     ? filteredGallery[lightboxIndex].titleBn
                     : filteredGallery[lightboxIndex].titleEn
                 }
-                accentColor={filteredGallery[lightboxIndex].dominantColor}
                 className="h-full w-full"
               />
             </div>
