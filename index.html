@@ -20,6 +20,17 @@
         color: #F7F2EE;
         margin: 0;
       }
+      #nl-hud-frame,
+      #nl-badge-frame,
+      iframe#nl-hud-frame,
+      iframe#nl-badge-frame {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
     </style>
     <script type="application/ld+json">
       {
@@ -46,6 +57,8 @@
     </script>
   </head>
   <body class="bg-[#1B1218] text-[#F7F2EE] antialiased selection:bg-[#A36E4A]/30 selection:text-[#F7F2EE]">
+    <div id="nl-badge-frame" hidden aria-hidden="true"></div>
+    <div id="nl-hud-frame" hidden aria-hidden="true"></div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <script>
